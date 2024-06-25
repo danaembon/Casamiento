@@ -1,13 +1,148 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: #242424;
+  background-color: rgba(252, 250, 245, 0.87);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+}
+
+h1 {
+  
+  font-family: "Rosarivo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.2em;
+  line-height: 1.1;
+  user-select: none;
+}
+
+
+.inicio {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* La sección ocupará todo el ancho disponible */
+  height: 100vh; /* La sección ocupará toda la altura del viewport */
+  /* Opcional: Para asegurar que no haya márgenes o rellenos que interfieran */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedorFotos {
+  width: 27%; /* Ancho del contenedor */
+  height: auto; /* Altura ajustada automáticamente según el contenido */
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombra */
+  overflow: hidden; /* Para ocultar cualquier parte de la imagen que sobresalga del contenedor */
+  max-height: 450px; 
+  max-width: 400px; 
+}
+
+.fotos {
+  width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+  display: block; /* Hacer que la imagen sea un bloque para alinearla correctamente */
+}
+
+.titulo {
+  padding: 0;
+  margin: 2rem
+}
+
+/* Estilos generales para el encabezado */
+header.navegation {
+  background-color: #242424; /* Color de fondo del encabezado */
+  padding: 1px 0; /* Espaciado interno superior e inferior */
+  user-select: none;
+}
+
+/* Estilos para el contenedor de navegación */
+header.navegation nav {
+  text-align: right; /* Centra los elementos de navegación */
+}
+
+/* Estilos para la lista de navegación */
+header.navegation nav ul {
+  list-style-type: none; /* Quita los estilos de lista (viñetas) */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+/* Estilos para los elementos de la lista de navegación */
+header.navegation nav ul li {
+  display: inline-block; /* Muestra los elementos de lista en línea */ /* Espaciado derecho entre elementos de lista */
+}
+
+/* Estilos para los enlaces dentro de la lista de navegación */
+header.navegation nav ul li a {
+  text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+  color:rgba(252, 250, 245, 0.87);; /* Color del texto de los enlaces */
+  padding: 5px 10px; /* Espaciado interno del enlace */
+  transition: color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+/* Estilos para el efecto hover en los enlaces */
+header.navegation nav ul li a:hover {
+  color: rgba(194, 194, 194, 0.87); /* Cambia el color de fondo al pasar el mouse */
+}
+
+.sectionConfirmar {
+  margin: 10rem 0 10rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+form label {
+  display: block;
+  margin: 0.2rem;
+}
+
+form input  {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+a {
+  font-weight: 500;
+  text-decoration: none;
+
+}
+
+
+.error {
+  display: block;
+  color: tomato;
+  font-size: x-small;
+  font-weight: bold;
 }
