@@ -1,5 +1,6 @@
 import PHOTOS  from './consts.js';
 import { useState, useEffect } from "react";
+import React from 'react';
 
 
   const PhotoChanger = () => {
