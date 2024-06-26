@@ -39,17 +39,17 @@ const getRows = await googleSheets.spreadsheets.values.get({
 
 })
 
-await googleSheets.spreadsheets.values.append({
-    auth,
-    spreadsheetId,
-    range: "casamiento!A:C",
-    valueInputOption: "USER_ENTERED",
-    resource: {
-        values: [
-            []
-        ]
-    }
-})
+    googleSheets.spreadsheets.values.append({
+        auth,
+        spreadsheetId,
+        range: "casamiento!A:C",
+        valueInputOption: "USER_ENTERED",
+        resource: {
+            values: [
+                []
+            ]
+        }
+    })
 res.json({message: "Hola desde el servidor"})
 res.send(getRows.data)
   });
