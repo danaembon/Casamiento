@@ -24,4 +24,5 @@
     "eslint-plugin-react": "^7.34.3",
     "globals": "^15.6.0"
   }
+  
 }

@@ -21,5 +21,4 @@ import React from 'react';
 
     return <img className='fotos' src={PHOTOS[index]} alt="random"></img>
   }
-
   export default PhotoChanger;
