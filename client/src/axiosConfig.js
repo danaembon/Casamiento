@@ -1,11 +1,10 @@
 // axios.js
 
 import axios from 'axios';
-import config from './config';
 // Asegúrate de ajustar la ruta según tu estructura de archivos
 
 const instance = axios.create({
-  baseURL: config.backendUrl,
+  baseURL: `http://localhost:${process.env.PORT || 3001}`,
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json',
