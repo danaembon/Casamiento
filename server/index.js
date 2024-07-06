@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 const corsOptions = {
-  origin: 'https://casamiento-bce227035385.herokuapp.com', // Your frontend URL
+  origin: ['https://casamiento-bce227035385.herokuapp.com', 'http://localhost:3000'], // Your frontend URLs
   optionsSuccessStatus: 200
 };
 
@@ -45,6 +45,17 @@ app.get('/api', async (req, res) => {
     res.json(getRows.data);
   } catch (error) {
     console.error('Error en /api:', error.message, error.stack);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+// Handle form submission
+app.post('/addData', async (req, res) => {
+  try {
+    // Add your data handling logic here
+    res.status(200).json({ message: 'Data added successfully' });
+  } catch (error) {
+    console.error('Error en /addData:', error.message, error.stack);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
