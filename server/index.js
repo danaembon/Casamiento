@@ -4,7 +4,7 @@ const { google } = require('googleapis');
 const cors = require('cors');
 const fs = require('fs');
 
-const PORT = process.env.PORT || 3001;
+export const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(cors());
@@ -53,3 +53,4 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
+
