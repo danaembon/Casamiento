@@ -12,9 +12,10 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get("/api", async (req, res) => {
+  console.log("Accediendo a /api"); // Log para depuración
   try {
     const auth = new google.auth.GoogleAuth({
-      keyFile: "credentials.json",
+      credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS),
       scopes: "https://www.googleapis.com/auth/spreadsheets",
     });
 
@@ -30,7 +31,7 @@ app.get("/api", async (req, res) => {
 
     res.json(getRows.data);
   } catch (error) {
-    console.error('Error en /api:', error);
+    console.error('Error en /api:', error.message, error.stack);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
