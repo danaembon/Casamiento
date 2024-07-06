@@ -1,13 +1,23 @@
 const path = require('path');
 const express = require('express');
 const { google } = require('googleapis');
-const cors = require('cors');
+const cors = require('cors'); // Importa el módulo cors
 const fs = require('fs');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-app.use(cors());
+// Configuración CORS
+const corsOptions = {
+  origin: 'https://casamiento-bce227035385.herokuapp.com', // Reemplaza con el origen correcto de tu frontend
+  methods: ['GET', 'POST'], // Métodos permitidos
+  allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
+  optionsSuccessStatus: 200, // Código de respuesta para opciones preflight exitosas
+};
+
+// Middleware CORS
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Serve static files from the client's build directory
@@ -18,13 +28,13 @@ if (fs.existsSync(buildPath)) {
   console.log('The "build" folder of the client does not exist.');
 }
 
-// Endpoint to fetch data from Google Sheets
+// Endpoint para obtener datos desde Google Sheets
 app.get('/api', async (req, res) => {
-  console.log('Accessing /api'); // Debugging log
+  console.log('Accessing /api'); // Log de depuración
   try {
-    // Google authentication setup using service account JSON file
+    // Configuración de autenticación con Google usando archivo JSON de cuenta de servicio
     const auth = new google.auth.GoogleAuth({
-      keyFile: path.resolve(__dirname, 'credentials.json'), // Replace with actual path
+      keyFile: path.resolve(__dirname, 'credentials.json'), // Reemplaza con la ruta real
       scopes: 'https://www.googleapis.com/auth/spreadsheets',
     });
 
@@ -39,17 +49,17 @@ app.get('/api', async (req, res) => {
 
     res.json(getRows.data);
   } catch (error) {
-    console.error('Error in /api:', error.message, error.stack);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Error en /api:', error.message, error.stack);
+    res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
 
-// Route to serve index.html for all other routes
+// Ruta para servir index.html para todas las otras rutas
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(buildPath, 'index.html'));
 });
 
-// Start the server
+// Iniciar el servidor
 app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
