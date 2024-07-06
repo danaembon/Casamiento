@@ -7,13 +7,12 @@ const fs = require('fs');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+const corsOptions = {
+  origin: 'https://casamiento-bce227035385.herokuapp.com/', // Replace with your frontend URL
+  optionsSuccessStatus: 200
+};
 
-// Aplicar CORS a todas las rutas
 app.use(cors(corsOptions));
-
-// Manejar específicamente las solicitudes OPTIONS
-app.options('*', cors(corsOptions));
-
 app.use(express.json());
 
 // Serve static files from the client's build directory
