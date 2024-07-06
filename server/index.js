@@ -23,6 +23,9 @@ if (fs.existsSync(buildPath)) {
   console.log('The "build" folder of the client does not exist.');
 }
 
+// Serve static files from the public directory
+app.use('/assets', express.static(path.join(__dirname, '../client/public/assets')));
+
 // Endpoint to get data from Google Sheets
 app.get('/api', async (req, res) => {
   console.log('Accessing /api'); // Log for debugging
