@@ -61,3 +61,35 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
+
+app.post('/addData', async (req, res) => {
+  console.log('Recibiendo datos en /addData:', req.body);
+  try {
+    const { nombre, apellido, comida } = req.body;
+
+    // Usa la misma configuración de autenticación que ya tienes
+    const auth = new google.auth.GoogleAuth({
+      keyFile: path.resolve(__dirname, 'credentials.json'),
+      scopes: 'https://www.googleapis.com/auth/spreadsheets',
+    });
+
+    const client = await auth.getClient();
+    const googleSheets = google.sheets({ version: 'v4', auth: client });
+    const spreadsheetId = '1Wk0Cof5tloLvtPaZ8w9xrKe61-YSpxHZPSrR7_nDUOc';
+
+    // Añadir los nuevos datos a la hoja
+    await googleSheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: 'casamiento!A:C', // Asegúrate de que este rango sea correcto
+      valueInputOption: 'USER_ENTERED',
+      resource: {
+        values: [[nombre, apellido, comida]]
+      }
+    });
+
+    res.status(200).json({ message: 'Datos agregados exitosamente' });
+  } catch (error) {
+    console.error('Error al agregar datos:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});

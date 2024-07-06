@@ -1,7 +1,11 @@
+// axios.js
+
 import axios from 'axios';
+import config from '../../server/config';
+// Asegúrate de ajustar la ruta según tu estructura de archivos
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001',
+  baseURL: config.backendUrl,
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json',
