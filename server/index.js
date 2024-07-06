@@ -30,7 +30,7 @@ app.get('/api', async (req, res) => {
 
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: 'v4', auth: client });
-    const spreadsheetId = 'YOUR_SPREADSHEET_ID';
+    const spreadsheetId = '1Wk0Cof5tloLvtPaZ8w9xrKe61-YSpxHZPSrR7_nDUOc';
 
     const getRows = await googleSheets.spreadsheets.values.get({
       spreadsheetId,
