@@ -24,9 +24,9 @@ app.get('/api', async (req, res) => {
   try {
     // Configuración de autenticación de Google
     const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS),
-      scopes: 'https://www.googleapis.com/auth/spreadsheets',
-    });
+    credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS),
+    scopes: "https://www.googleapis.com/auth/spreadsheets",
+  });
 
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: 'v4', auth: client });
