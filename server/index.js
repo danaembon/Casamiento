@@ -1,36 +1,34 @@
 const path = require('path');
 const express = require('express');
 const { google } = require('googleapis');
-const cors = require('cors'); // Importa el módulo cors
+const cors = require('cors');
 const fs = require('fs');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Configuración CORS
+// Middleware CORS
 const corsOptions = {
   origin: 'https://casamiento-bce227035385.herokuapp.com', // Reemplaza con el origen correcto de tu frontend
   methods: ['GET', 'POST'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
   optionsSuccessStatus: 200, // Código de respuesta para opciones preflight exitosas
 };
-
-// Middleware CORS
 app.use(cors(corsOptions));
 
 app.use(express.json());
 
-// Serve static files from the client's build directory
+// Ruta para servir archivos estáticos desde el directorio 'build' del cliente
 const buildPath = path.resolve(__dirname, '../client/build');
 if (fs.existsSync(buildPath)) {
   app.use(express.static(buildPath));
 } else {
-  console.log('The "build" folder of the client does not exist.');
+  console.log('La carpeta "build" del cliente no existe.');
 }
 
 // Endpoint para obtener datos desde Google Sheets
 app.get('/api', async (req, res) => {
-  console.log('Accessing /api'); // Log de depuración
+  console.log('Accediendo a /api'); // Log de depuración
   try {
     // Configuración de autenticación con Google usando archivo JSON de cuenta de servicio
     const auth = new google.auth.GoogleAuth({
