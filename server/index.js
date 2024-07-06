@@ -4,7 +4,7 @@ const { google } = require('googleapis');
 const cors = require('cors');
 const fs = require('fs');
 
-export const PORT = process.env.PORT || 3001;
+export const PORT =  3001;
 const app = express();
 
 app.use(cors());
