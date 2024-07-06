@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 const corsOptions = {
-  origin: 'https://casamiento-bce227035385.herokuapp.com/', // Replace with your frontend URL
+  origin: 'https://casamiento-bce227035385.herokuapp.com', // Your frontend URL
   optionsSuccessStatus: 200
 };
 
