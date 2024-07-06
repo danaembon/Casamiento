@@ -10,47 +10,46 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ruta estática para servir archivos desde casamiento/client/build
+// Serve static files from the client's build directory
 const buildPath = path.resolve(__dirname, '../client/build');
 if (fs.existsSync(buildPath)) {
   app.use(express.static(buildPath));
 } else {
-  console.log('La carpeta "build" del cliente no existe.');
+  console.log('The "build" folder of the client does not exist.');
 }
 
-// Ruta para obtener datos desde Google Sheets
+// Endpoint to fetch data from Google Sheets
 app.get('/api', async (req, res) => {
-  console.log('Accediendo a /api'); // Log para depuración
+  console.log('Accessing /api'); // Debugging log
   try {
-    // Configuración de autenticación de Google
+    // Google authentication setup using service account JSON file
     const auth = new google.auth.GoogleAuth({
-    credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS),
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
-  });
+      keyFile: path.resolve(__dirname, 'path/to/service-account-file.json'), // Replace with actual path
+      scopes: 'https://www.googleapis.com/auth/spreadsheets',
+    });
 
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: 'v4', auth: client });
-    const spreadsheetId = '1Wk0Cof5tloLvtPaZ8w9xrKe61-YSpxHZPSrR7_nDUOc';
+    const spreadsheetId = 'YOUR_SPREADSHEET_ID';
 
     const getRows = await googleSheets.spreadsheets.values.get({
-      auth,
       spreadsheetId,
       range: 'casamiento!A:C',
     });
 
     res.json(getRows.data);
   } catch (error) {
-    console.error('Error en /api:', error.message, error.stack);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    console.error('Error in /api:', error.message, error.stack);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-// Ruta para manejar todas las demás solicitudes y servir el archivo index.html del cliente
+// Route to serve index.html for all other routes
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(buildPath, 'index.html'));
 });
 
-// Iniciar el servidor
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Server listening on http://localhost:${PORT}`);
 });
