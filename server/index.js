@@ -7,10 +7,12 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
+// Ruta para obtener datos desde Google Sheets
 app.get("/api", async (req, res) => {
   console.log("Accediendo a /api"); // Log para depuración
   try {
@@ -36,10 +38,12 @@ app.get("/api", async (req, res) => {
   }
 });
 
+// Ruta para servir el archivo index.html en todas las demás rutas
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
+// Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
