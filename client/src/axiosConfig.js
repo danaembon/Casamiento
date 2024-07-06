@@ -1,7 +1,7 @@
 // axios.js
 
 import axios from 'axios';
-import config from '../../server/config';
+import config from './config';
 // Asegúrate de ajustar la ruta según tu estructura de archivos
 
 const instance = axios.create({
