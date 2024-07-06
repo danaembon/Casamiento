@@ -7,13 +7,13 @@ const Formulario = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Enviar datos al backend usando Axios
+      // Send data to the backend using Axios
       const response = await axios.post('/addData', data);
-
+  
       if (response.status === 200) {
         console.log('Formulario enviado exitosamente!');
         alert('Formulario enviado exitosamente!');
-        reset(); // Resetear el formulario después de enviarlo exitosamente
+        reset(); // Reset the form after successful submission
       } else {
         throw new Error('Error al enviar formulario');
       }

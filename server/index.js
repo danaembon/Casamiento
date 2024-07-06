@@ -23,13 +23,13 @@ if (fs.existsSync(buildPath)) {
   console.log('The "build" folder of the client does not exist.');
 }
 
-// Endpoint para obtener datos desde Google Sheets
+// Endpoint to get data from Google Sheets
 app.get('/api', async (req, res) => {
-  console.log('Accessing /api'); // Log de depuración
+  console.log('Accessing /api'); // Log for debugging
   try {
-    // Configuración de autenticación con Google usando archivo JSON de cuenta de servicio
+    // Google authentication configuration using service account JSON file
     const auth = new google.auth.GoogleAuth({
-      keyFile: path.resolve(__dirname, 'credentials.json'), // Reemplaza con la ruta real
+      keyFile: path.resolve(__dirname, 'credentials.json'), // Replace with the actual path
       scopes: 'https://www.googleapis.com/auth/spreadsheets',
     });
 
@@ -44,28 +44,51 @@ app.get('/api', async (req, res) => {
 
     res.json(getRows.data);
   } catch (error) {
-    console.error('Error en /api:', error.message, error.stack);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    console.error('Error in /api:', error.message, error.stack);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-// Handle form submission
+// Endpoint to handle form submissions and add data to Google Sheets
 app.post('/addData', async (req, res) => {
   try {
-    // Add your data handling logic here
+    const { nombre, apellido, comida } = req.body;
+
+    // Google authentication configuration using service account JSON file
+    const auth = new google.auth.GoogleAuth({
+      keyFile: path.resolve(__dirname, 'credentials.json'), // Replace with the actual path
+      scopes: 'https://www.googleapis.com/auth/spreadsheets',
+    });
+
+    const client = await auth.getClient();
+    const googleSheets = google.sheets({ version: 'v4', auth: client });
+    const spreadsheetId = '1Wk0Cof5tloLvtPaZ8w9xrKe61-YSpxHZPSrR7_nDUOc';
+
+    // Append the data to the Google Sheet
+    await googleSheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: 'casamiento!A:C',
+      valueInputOption: 'USER_ENTERED',
+      resource: {
+        values: [
+          [nombre, apellido, comida]
+        ],
+      },
+    });
+
     res.status(200).json({ message: 'Data added successfully' });
   } catch (error) {
-    console.error('Error en /addData:', error.message, error.stack);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    console.error('Error in /addData:', error.message, error.stack);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-// Ruta para servir index.html para todas las otras rutas
+// Route to serve index.html for all other routes
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(buildPath, 'index.html'));
 });
 
-// Iniciar el servidor
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Server listening at http://localhost:${PORT}`);
 });
