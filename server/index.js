@@ -24,7 +24,7 @@ app.get('/api', async (req, res) => {
   try {
     // Google authentication setup using service account JSON file
     const auth = new google.auth.GoogleAuth({
-      keyFile: path.resolve(__dirname, 'path/to/service-account-file.json'), // Replace with actual path
+      keyFile: path.resolve(__dirname, 'server/cerenditals.json'), // Replace with actual path
       scopes: 'https://www.googleapis.com/auth/spreadsheets',
     });
 
