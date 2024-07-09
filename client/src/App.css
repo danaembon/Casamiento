@@ -1,28 +1,225 @@
+:root {
+  --font-family-main: "Roboto", sans-serif;
+  --font-family-heading: "Rosarivo", cursive;
+  --font-family-countdown: 'Orbitron', sans-serif;
+  --color-primary: #242424;
+  --color-secondary: rgba(252, 250, 245, 0.87);
+  --color-hover: rgba(194, 194, 194, 0.87);
+  --color-highlight: #646cff;
+  --color-error: tomato;
+  --font-weight-main: 500;
+  --font-weight-heading: 400;
+  --font-size-heading: 3.2em;
+  --font-size-button: 1em;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  --padding-button: 0.6em 1.2em;
+  --padding-nav: 5px 10px;
+  --margin-title: 2rem;
+  --margin-section: 10rem 0;
+}
+
+body {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-main);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 #root {
   margin: auto;
   text-align: center;
 }
 
-.cuentaRegresiva{
+h1 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--font-size-heading);
+  line-height: 1.1;
+  user-select: none;
+  margin: 1rem 0;
+}
+
+.inicio {
   display: flex;
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
+.cuentaRegresiva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-family-countdown);
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
 .circulo {
   width: 100px;
   height: 100px;
-  background-color: #242424; /* Color de fondo */
-  border-radius: 20%; /* Hace que el div sea circular */
-  display: inline-flex; /* Para que estén uno al lado 
-  del otro */
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: inline-flex;
   justify-content: center;
-  align-items: center; /* Centra verticalmente el contenido */
+  align-items: center;
   overflow: hidden;
   padding: 2px;
-  margin: 10px; /* Espacio entre los círculos */
-  color: rgba(252, 250, 245, 0.87);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  color: var(--color-secondary);
+  box-shadow: var(--box-shadow);
+}
+
+.contenedorFotos {
+  width: 27%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  max-height: 450px;
+}
+
+.fotos {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.titulo {
+  padding: 0;
+  margin: var(--margin-title) 0;
+}
+
+header.navegation {
+  background-color: var(--color-primary);
+  padding: 1px 0;
+  user-select: none;
+}
+
+header.navegation nav {
+  text-align: right;
+}
+
+header.navegation nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header.navegation nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+header.navegation nav ul li a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  padding: var(--padding-nav);
+  transition: color 0.3s ease;
+}
+
+header.navegation nav ul li a:hover {
+  color: var(--color-hover);
+}
+
+.sectionConfirmar {
+  margin: var(--margin-section);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+form label {
+  display: block;
+  margin: 0.2rem;
+}
+
+form input {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  padding: var(--padding-button);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-main);
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--color-highlight);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.error {
+  display: block;
+  color: var(--color-error);
+  font-size: x-small;
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .inicio {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .titulo {
+    font-size: 2em;
+  }
+
+  .contenedorFotos {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .cuentaRegresiva {
+    flex-direction: column;
+  }
+
+  .circulo {
+    width: 60px;
+    height: 60px;
+  }
+
+  header.navegation nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navegation nav ul li {
+    margin: 10px 0;
+  }
 }
