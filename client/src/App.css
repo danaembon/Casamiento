@@ -1,7 +1,7 @@
 :root {
-  --font-family-main: "Roboto", sans-serif;
-  --font-family-heading: "Rosarivo", cursive;
-  --font-family-countdown: 'Orbitron', sans-serif;
+  --font-family-main: "Lora", serif;
+  --font-family-heading: "Lora", serif;
+  --font-family-countdown: "Lora", serif;
   --color-primary: #242424;
   --color-secondary: rgba(252, 250, 245, 0.87);
   --color-hover: rgba(194, 194, 194, 0.87);
@@ -93,6 +93,7 @@ h1 {
   overflow: hidden;
   max-height: 675px;
   margin: 3rem;
+  user-select: none;
 }
 
 .fotos {
