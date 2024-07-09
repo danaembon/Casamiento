@@ -27,7 +27,13 @@ function App() {
         </nav>
       </header>
       <section className='inicio'>
-        <h1 className='titulo'>Casamiento de Iair y Michu</h1>
+        <div>
+          <p className='fecha'>17-11-24</p>
+          <hr className="linea-separadora titulo"/>
+          <h1 className='titulo'>IyM</h1>
+          <hr className="linea-separadora invitamos"/>
+          <h2 className='subtitulo'>Los invitamos al nuetro casamiento</h2>
+        </div>
         <div className='contenedorFotos'>
           <PhotoChanger />
         </div>
@@ -53,13 +59,6 @@ function App() {
       <section>
         <CountdownTimer/>
       </section>
-
-      
-    <div className="App">
-      <header className="App-header">
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
     </main>
   )
 }

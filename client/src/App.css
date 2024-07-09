@@ -17,6 +17,9 @@
   --padding-nav: 5px 10px;
   --margin-title: 2rem;
   --margin-section: 10rem 0;
+  --margin: 20px 0;
+  --font-size-subtitle: 1.5em;
+  --font-size-date: 1.2em;
 }
 
 body {
@@ -79,19 +82,24 @@ h1 {
 }
 
 .contenedorFotos {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
   width: 27%;
   max-width: 400px;
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   overflow: hidden;
-  max-height: 450px;
+  max-height: 675px;
+  margin: 3rem;
 }
 
 .fotos {
   width: 100%;
   height: auto;
   display: block;
+  user-select: none;
 }
 
 .titulo {
@@ -187,6 +195,27 @@ a {
   color: var(--color-error);
   font-size: x-small;
   font-weight: bold;
+}
+
+/* Nuevos Estilos Agregados */
+.fecha {
+  font-size: var(--font-size-date);
+  color: var(--color-primary);
+  margin-bottom: var(--margin);
+}
+
+.linea-separadora {
+  border: 0;
+  height: 2px;
+  background: var(--color-primary);
+  margin: var(--margin) 0;
+}
+
+.subtitulo {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-subtitle);
+  color: var(--color-primary);
+  margin: var(--margin) 0;
 }
 
 /* Media Queries */
