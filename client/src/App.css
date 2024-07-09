@@ -18,7 +18,7 @@
   --margin-title: 2rem;
   --margin-section: 10rem 0;
   --margin: 20px 0;
-  --font-size-subtitle: 1.5em;
+  --font-size-subtitle: 1.3em;
   --font-size-date: 1.2em;
 }
 
@@ -85,14 +85,14 @@ h1 {
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
-  width: 27%;
+  width: 50%;
   max-width: 400px;
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   overflow: hidden;
-  max-height: 675px;
-  margin: 3rem;
+  max-height: 450px;
+  margin-left: 3rem;
   user-select: none;
 }
 
