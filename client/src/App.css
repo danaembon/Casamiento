@@ -217,27 +217,16 @@ a {
   position: relative;
 }
 
-.heart::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  transform: translateX(-50%);
-  background: none;
-}
-
 .heart svg {
   fill: none;
-  stroke: #e25555;
+  stroke: var(--color-primary);
   stroke-width: 2px;
   stroke-dasharray: 100 100;
-  animation: draw 2s forwards;
+  animation: draw 4s infinite;
 }
 
 .heart svg path {
-  stroke: #e25555;
+  stroke: var(--color-primary);
 }
 
 .texto {
