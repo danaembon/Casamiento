@@ -103,6 +103,16 @@ h1 {
   user-select: none;
 }
 
+.texto, .fotos {
+  flex: 1 1 100%;
+}
+
+.texto, .fotos {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
 .titulo {
   padding: 0;
   margin: var(--margin-title) 0;
@@ -119,7 +129,7 @@ h1 {
 
 header.navegation {
   background-color: var(--color-primary);
-  padding: 1px 0;
+  padding: 1rem;
   user-select: none;
 }
 
@@ -144,7 +154,7 @@ header.navegation nav ul li a {
   text-decoration: none;
   color: var(--color-secondary);
   padding: var(--padding-nav);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 header.navegation nav ul li a:hover {
@@ -245,7 +255,11 @@ a {
   }
 
   .contenedorFotos {
-    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-top: 1rem;
   }
 

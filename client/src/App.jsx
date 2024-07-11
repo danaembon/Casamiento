@@ -43,7 +43,7 @@ function App() {
         </nav>
       </header>
       <section className='inicio'>
-        <div>
+        <div className='texto'>
           <p className='fecha'>17-11-24</p>
           <hr className="linea-separadora titulo"/>
           <h1 className='titulo'>IyM</h1>
