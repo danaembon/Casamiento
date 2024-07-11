@@ -14,9 +14,9 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
-
-  const navRef = useRef(null);
   
+  const navRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -26,7 +26,7 @@ function App() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
