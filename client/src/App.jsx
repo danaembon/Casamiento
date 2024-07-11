@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import CountdownTimer from './logica/countDown.jsx'
 import PhotoChanger  from './logica/photos.jsx'
 import Formulario from './logica/formulario.jsx'
