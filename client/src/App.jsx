@@ -61,10 +61,12 @@ function App() {
           <h1 className='titulo'>IyM</h1>
           <hr className="linea-separadora invitamos"/>
           <h2 className='subtitulo'>Los invitamos a nuetro casamiento</h2>
-          <span className='heart'><svg viewBox="0 0 32 29.6">
-          <path d="M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.7,0,0,3.7,0,8.4c0,4.5,3.8,8.1,9.4,13.2
-          l6.6,5.9l6.6-5.9c5.6-5.1,9.4-8.7,9.4-13.2C32,3.7,28.3,0,23.6,0z" style="stroke-linecap: round; stroke-linejoin: round;"/>
-          </svg></span> 
+              <>
+                <svg viewBox="0 0 32 29.6">
+                  <path d="M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.7,0,0,3.7,0,8.4c0,4.5,3.8,8.1,9.4,13.2
+                  l6.6,5.9l6.6-5.9c5.6-5.1,9.4-8.7,9.4-13.2C32,3.7,28.3,0,23.6,0z" style={{strokeLinecap: 'round', strokeLinejoin: 'round'}}/>
+                </svg>
+              </>
         </div>
         <div className='contenedorFotos'>
           <PhotoChanger />
