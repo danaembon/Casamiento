@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         navRef.current.classList.add('hidden');
