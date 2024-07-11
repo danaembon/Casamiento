@@ -224,7 +224,10 @@ a {
   stroke-dasharray: 100 100;
   animation: draw 4s infinite;
 }
-
+.heart-path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .heart svg path {
   stroke: var(--color-primary);
 }
