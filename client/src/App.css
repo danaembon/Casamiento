@@ -200,6 +200,50 @@ a {
   text-decoration: none;
 }
 
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+.heart {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: none;
+  position: relative;
+}
+
+.heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%);
+  background: none;
+}
+
+.heart svg {
+  fill: none;
+  stroke: #e25555;
+  stroke-width: 2px;
+  stroke-dasharray: 100 100;
+  animation: draw 2s forwards;
+}
+
+.heart svg path {
+  stroke: #e25555;
+}
+
+.texto {
+  margin: auto;
+}
+
 .hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease;

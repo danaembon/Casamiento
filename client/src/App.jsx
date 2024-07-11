@@ -14,7 +14,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
-  
+
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -26,7 +26,19 @@ function App() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Verifica si el navegador soporta event listeners pasivos
+    let supportsPassive = false;
+    try {
+      const opts = Object.defineProperty({}, 'passive', {
+        get: function() {
+          supportsPassive = true;
+        }
+      });
+      window.addEventListener('testPassive', null, opts);
+      window.removeEventListener('testPassive', null, opts);
+    } catch (e) {}
+
+    window.addEventListener('scroll', handleScroll, supportsPassive ? { passive: true } : false);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -48,7 +60,11 @@ function App() {
           <hr className="linea-separadora titulo"/>
           <h1 className='titulo'>IyM</h1>
           <hr className="linea-separadora invitamos"/>
-          <h2 className='subtitulo'>Los invitamos al nuetro casamiento</h2>
+          <h2 className='subtitulo'>Los invitamos a nuetro casamiento</h2>
+          <span className='heart'><svg viewBox="0 0 32 29.6">
+          <path d="M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.7,0,0,3.7,0,8.4c0,4.5,3.8,8.1,9.4,13.2
+          l6.6,5.9l6.6-5.9c5.6-5.1,9.4-8.7,9.4-13.2C32,3.7,28.3,0,23.6,0z"/>
+          </svg></span>
         </div>
         <div className='contenedorFotos'>
           <PhotoChanger />
