@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import React, { useRef, useEffect } from 'react';
 import CountdownTimer from './logica/countDown.jsx'
 import PhotoChanger  from './logica/photos.jsx'
 import Formulario from './logica/formulario.jsx'
@@ -7,16 +7,17 @@ import Formulario from './logica/formulario.jsx'
 
 function App() {
 
-  const [data, setData] = React.useState(null);
+  const [data, setData] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
 
+  const navRef = useRef(null);
   
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         navRef.current.classList.add('hidden');
