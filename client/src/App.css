@@ -108,6 +108,15 @@ h1 {
   margin: var(--margin-title) 0;
 }
 
+
+.navegation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
 header.navegation {
   background-color: var(--color-primary);
   padding: 1px 0;
@@ -189,6 +198,11 @@ button:focus-visible {
 a {
   font-weight: 500;
   text-decoration: none;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 .error {

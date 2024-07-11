@@ -16,9 +16,24 @@ function App() {
   }, []);
 
   
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        navRef.current.classList.add('hidden');
+      } else {
+        navRef.current.classList.remove('hidden');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <main>
-      <header className='navegation'>
+      <header ref={navRef} className='navegation'>
         <nav>
           <ul>
             <li><a href="#informacion">Infomacion</a></li>
