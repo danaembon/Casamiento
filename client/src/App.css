@@ -245,8 +245,12 @@ a {
   }
 
   .contenedorFotos {
+    display: flex;
     width: 90%;
     margin-top: 1rem;
+    max-height: 100%;
+    max-width: 50%;
+    align-items: center
   }
 
   .cuentaRegresiva {
