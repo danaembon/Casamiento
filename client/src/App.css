@@ -286,10 +286,11 @@ a {
   .contenedorFotos {
     display: flex;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 3rem;
     max-height: 100%;
     max-width: 100%;
-    align-items: center
+    align-items: center;
+    border-radius: 0;
   }
 
   .cuentaRegresiva {
