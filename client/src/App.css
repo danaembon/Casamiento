@@ -45,6 +45,11 @@ h1 {
   margin: 1rem 0;
 }
 
+iframe {
+  width: 600px;
+  height: 400px;
+}
+
 .inicio {
   display: flex;
   flex-direction: row;
@@ -273,6 +278,12 @@ a {
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+  iframe {
+    height: 300px;
+    width: 100vw;
+  }
+
   .inicio {
     flex-direction: column;
     height: auto;
