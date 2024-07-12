@@ -57,9 +57,9 @@ function App() {
       <section className='inicio'>
         <div className='texto'>
           <p className='fecha'>17-11-24</p>
-          <hr className="linea-separadora titulo"/>
+          <hr className="linea-separadora-inicio titulo"/>
           <h1 className='titulo'>IyM</h1>
-          <hr className="linea-separadora invitamos"/>
+          <hr className="linea-separadora-inicio invitamos"/>
           <h2 className='subtitulo'>Los invitamos a nuetro casamiento</h2>
           <span className='heart'>
           <svg viewBox="-10 0 52 32">
@@ -72,17 +72,33 @@ function App() {
           <PhotoChanger />
         </div>
       </section>
-      <section id='informacion'>
+      <section id="informacion">
         <article>
-         <h2>Ceremonia y Fiesta</h2>
-         <h3>17 de Noviembre</h3>
-         <h3>Finca Madero - Pilar</h3>
-         <div>
-          <p>¿Como llegar?</p>
-          <div>
-          <iframe title='ubicacion al casamiento' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.195468048256!2d-58.79825969999999!3d-34.4471857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9ecf9c7c2583%3A0x81b2e7a09d3c0dda!2sFinca%20Madero%20El%20Omb%C3%BA!5e0!3m2!1ses-419!2sil!4v1718443574799!5m2!1ses-419!2sil" style={{border:0,  allowfullscreen: "", loading: "lazy", referrerpolicy: "no-referrer-when-downgrade"}}></iframe>
+          <h2 className="titulo-informacion">Ceremonia y Fiesta</h2>
+          <div className="info-container">
+            <div className="info-item">
+              <h3>17 de Noviembre</h3>
+              <hr className="linea-separadora-informacion" />
+            </div>
+            <div className="info-item">
+              <h3>Finca Madero - Pilar</h3>
+              <hr className="linea-separadora-informacion" />
+            </div>
+            <div className="info-item">
+              <p>¿Cómo llegar?</p>
+              <hr className="linea-separadora-informacion" />
+            </div>
           </div>
-         </div>
+          <div className="map-container">
+            <iframe 
+              title="ubicacion al casamiento" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.195468048256!2d-58.79825969999999!3d-34.4471857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9ecf9c7c2583%3A0x81b2e7a09d3c0dda!2sFinca%20Madero%20El%20Omb%C3%BA!5e0!3m2!1ses-419!2sil!4v1718443574799!5m2!1ses-419!2sil" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </article>
       </section>
       <section id='confirmar' className='sectionConfirmar'>
