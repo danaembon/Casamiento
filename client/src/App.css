@@ -276,6 +276,7 @@ a {
   .inicio {
     flex-direction: column;
     height: auto;
+    margin-top: 8rem;
   }
 
   .titulo {
@@ -286,7 +287,6 @@ a {
   .contenedorFotos {
     display: flex;
     width: 100%;
-    margin-top: 8rem;
     max-height: 100%;
     max-width: 100%;
     align-items: center;
