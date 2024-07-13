@@ -189,7 +189,7 @@ iframe {
   border-right: 4px solid var(--color-primary);
 
 }
-.cuentaRegresiva:last-child{
+.ultimoCirculo{ 
   border-right: none;
   border-left-color: var(--color-primary);
 }
@@ -528,6 +528,12 @@ a {
     font-size: 1.5rem;
     width: 60px;
     height: 60px;
+  }
+  .containerCirculo p{
+    margin: 0;
+  }
+  .containerCirculo {
+    padding: 0.4rem;
   }
 
   header.navegation nav ul {
