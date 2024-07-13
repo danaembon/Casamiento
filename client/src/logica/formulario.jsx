@@ -25,7 +25,8 @@ const Formulario = () => {
   };
 
   return (
-    <form className='formulario' onSubmit={handleSubmit(onSubmit)}> <div className="input-group">
+    <form className='formulario' onSubmit={handleSubmit(onSubmit)}> 
+    <div className="input-group">
     <label htmlFor="nombre">Nombre: </label>
     <input
       type="text"
@@ -62,6 +63,20 @@ const Formulario = () => {
       <option value="sinGluten">Sin Gluten</option>
     </select>
     {errors.comida && <span className="error">Preferencia es requerida</span>}
+  </div>
+
+  <div className="input-group">
+    <label htmlFor="musica">Recomendanos una canción: </label>
+    <input
+      type="text"
+      id="cancion"
+      name="cancion"
+      {...register("cancion", {
+        minLength: { value: 2, message: "Canción debe tener al menos 2 caracteres" },
+        maxLength: { value: 15, message: "Canción debe tener menos de 15 caracteres" }
+      })}
+    />
+    {errors.cancion && <span className="error">{errors.cancion.message}</span>}
   </div>
   {confirmado && <p className="confirmacion">Confirmado</p>}
   <div className="button-group">
