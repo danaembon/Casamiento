@@ -54,7 +54,8 @@ h1 {
 }
 
 .line-horizontal, .line-vertical {
-  animation: draw 4s infinite;
+  opacity: 0;
+  animation: fadeinout 4s infinite;
 }
 
 
@@ -342,6 +343,13 @@ header.navegation nav ul li a:hover {
 a {
   font-weight: 500;
   text-decoration: none;
+}
+
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes draw {
