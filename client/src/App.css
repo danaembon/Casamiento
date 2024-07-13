@@ -123,7 +123,7 @@ h1 {
   margin-top: 2rem;
 }
 
-.icono-mapa, .icono-regalo {
+.icono-mapa, .icono-regalo, .infinity {
   cursor: pointer;
   margin: 20px 0;
   animation: draw 4s infinite;
@@ -402,18 +402,12 @@ a {
   font-weight: bold;
 }
 
-/* Nuevos Estilos Agregados */
-.fecha {
-  font-size: var(--font-size-date);
-  color: var(--color-primary);
-  margin-bottom: var(--margin);
-}
-
 .linea-separadora-inicio {
   border: 0;
   height: 2px;
   background: var(--color-primary);
   margin: var(--margin) 0;
+  width: 40%;
 }
 
 .subtitulo {
