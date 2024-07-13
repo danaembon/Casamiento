@@ -455,7 +455,7 @@ a {
 
 
 .input-group input, .input-group select, .button-group button {
-  padding: 8px;
+  padding: 0.5rem;
 }
 .button-group {
   flex-direction: column;
@@ -475,6 +475,7 @@ a {
   .titulo-informacion {
     font-size: 1.5rem;
     margin: 0.2rem;
+    padding-top: 4rem;
   }
   .datos {
     font-size: 0.9rem;
