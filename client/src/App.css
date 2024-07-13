@@ -382,6 +382,7 @@ a {
 
 .texto {
   margin: auto;
+  padding: 4rem;
 }
 
 .hidden {
@@ -406,7 +407,7 @@ a {
   border: 0;
   height: 2px;
   background: var(--color-primary);
-  margin: var(--margin) 0;
+  margin: var(--margin) auto;
   width: 40%;
 }
 
