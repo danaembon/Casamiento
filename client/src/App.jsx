@@ -55,6 +55,9 @@ function App() {
         </nav>
       </header>
       <section className='inicio'>
+        <div className='contenedorFotos'>
+          <PhotoChanger />
+        </div>
         <div className='texto'>
           <p className='fecha'>17-11-24</p>
           <hr className="linea-separadora-inicio titulo"/>
@@ -68,9 +71,9 @@ function App() {
             </svg>
           </span>
         </div>
-        <div className='contenedorFotos'>
-          <PhotoChanger />
-        </div>
+      </section>
+      <section>
+        <CountdownTimer/>
       </section>
       <section id="informacion">
   <article>
@@ -113,9 +116,6 @@ function App() {
           <h3>Se puede confirmar hasta el 1 de Agosto</h3>
           <Formulario />
         </article>
-      </section>
-      <section>
-        <CountdownTimer/>
       </section>
     </main>
   )

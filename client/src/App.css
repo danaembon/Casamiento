@@ -143,16 +143,21 @@ iframe {
 .circulo {
   width: 100px;
   height: 100px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
+  background-color: none;
+  border-right-color: var(--color-primary);
   display: inline-flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   padding: 2px;
   margin: 10px;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   box-shadow: var(--box-shadow);
+}
+
+.circulo:last-of-type {
+  border-right: none;
+  border-left-color: var(--color-primary);
 }
 
 .contenedorFotos {
