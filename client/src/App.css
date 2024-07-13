@@ -30,10 +30,202 @@ body {
   padding: 0;
   background-color: var(--color-secondary);
   color: var(--color-primary);
+}
+
+#root {
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--font-size-heading);
+  line-height: 1.1;
+  user-select: none;
+  margin: 1rem 0;
+}
+
+.line-horizontal line, .line-vertical line {
+  stroke: var(--color-secondary);
+  stroke-width: 5;
+  fill: none;
+}
+
+.line-horizontal, .line-vertical {
+  animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  25%, 75% { opacity: 1; }
+}
+
+.container-titulo-informacion {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.line-vertical {
+  height: calc(100% - 40px); /* Ajusta para tocar las líneas horizontales */
+  margin: -10px 0;
+}
+
+#informacion {
+  padding: 4rem 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  background-color: var(--color-terciario);
+  color: var(--color-secondary);
+  box-shadow: var(--box-shadow);
+}
+.container-datos-informacion {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.fecha-informacion, .lugar-informacion {
+  margin: 0 2rem;
+  width: 15rem;
+}
+
+.titulo-informacion {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  margin: 0.5rem;
+}
+
+.p {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-main);
+}
+
+.datos {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-main);
+}
+
+iframe {
+  width: 20rem;
+  height: 15rem;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.cuentaRegresiva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-family-countdown);
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.circulo {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2px;
+  margin: 10px;
+  color: var(--color-secondary);
+  box-shadow: var(--box-shadow);
+}
+
+.contenedorFotos {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  max-height: 100%;
+  max-width: 50%;
+  align-items: center;
+  justify-content: center; /* Centrar horizontalmente */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  user-select: none;
+}
+
+.fotos {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+.titulo {
+  padding: 0;
+  margin: var(--margin-title) 0;
+}
+
+.navegation {
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--color-primary);
+  padding: 1rem;
+  user-select: none;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+header.navegation {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  user-select: none;
+}
+
+header.navegation nav {
+  text-align: center;
+}
+
+header.navegation nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header.navegation nav ul li {
+  display: inline-block;
+  margin-right: 0 15px;
+}
+
+header.navegation nav ul li a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  padding: var(--padding-nav);
+  transition: color 0.3s ease-in-out;
+}
+
+header.navegation nav ul li a:hover {
+  color: var(--color-hover);
 }
 
 .formulario-container {
@@ -42,7 +234,7 @@ body {
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   max-width: 400px;
-  width: 100%;
+  margin: auto;
   text-align: center;
   color: var(--color-secondary);
   display: flex;
@@ -60,13 +252,20 @@ body {
   margin-bottom: 20px;
 }
 
-.formulario label {
-  display: block;
-  margin-bottom: 5px;
-  text-align: left;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.formulario input, .formulario select {
+.input-group label {
+  margin-bottom: 5px;
+  text-align: left;
+  color: var(--color-secondary);
+}
+
+.input-group input, .input-group select {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -76,12 +275,18 @@ body {
   box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
-.formulario input:focus-visible {
+.input-group input:focus-visible, .input-group select:focus-visible {
   border: 1px solid var(--color-highlight);
   outline: none;
 }
 
-.formulario button {
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-group button {
   width: 48%;
   padding: 10px;
   border: none;
@@ -90,15 +295,14 @@ body {
   color: var(--color-secondary);
   cursor: pointer;
   font-weight: bold;
-  margin: 10px 1%;
 }
 
-.formulario button:last-child {
+.button-group button:last-child {
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
 
-.formulario button:hover {
+.button-group button:hover {
   opacity: 0.8;
 }
 
@@ -113,22 +317,156 @@ a {
   font-weight: bold;
 }
 
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+.heart {
+  display: inline-block;
+  width: 7rem; /* Set a fixed width */
+  height: 7rem; /* Set a fixed height to make it a square */
+  background: none;
+  position: relative;
+}
+
+.heart svg {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2px;
+  stroke-dasharray: 100 100;
+  animation: draw 4s infinite;
+  width: 100%;
+  height: 100%;
+}
+
+.heart-path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.heart svg path {
+  stroke: var(--color-primary);
+}
+
+.texto {
+  margin: auto;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.error {
+  display: block;
+  color: var(--color-error);
+  font-size: x-small;
+  font-weight: bold;
+}
+
+/* Nuevos Estilos Agregados */
+.fecha {
+  font-size: var(--font-size-date);
+  color: var(--color-primary);
+  margin-bottom: var(--margin);
+}
+
+.linea-separadora-inicio {
+  border: 0;
+  height: 2px;
+  background: var(--color-primary);
+  margin: var(--margin) 0;
+}
+
+.subtitulo {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-subtitle);
+  color: var(--color-primary);
+  margin: var(--margin) 0;
+}
+
 /* Media Queries */
-@media (max-width: 768px) {
-  .formulario-container {
-    padding: 15px;
+@media (max-width: 768px) {.formulario-container {
+  padding: 15px;
+}
+
+.formulario h2 {
+  font-size: 1.5em;
+}
+
+.input-group input, .input-group select, .button-group button {
+  padding: 8px;
+}
+
+.button-group {
+  flex-direction: column;
+}
+
+.button-group button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+  #informacion {
+    padding: 2rem 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .titulo-informacion {
+    font-size: 1.5rem;
+    margin: 0.2rem;
+  }
+  .datos {
+    font-size: 0.9rem;
+  }
+  .fecha-informacion, .lugar-informacion {
+    margin: 0 0.4rem;
+    width: 15rem;
+  }
+  
+  iframe {
+    width: 12rem;
+    height: 8rem;
+  }
+  .inicio {
+    flex-direction: column;
+    height: auto;
+    margin-top: 8rem;
   }
 
-  .formulario h2 {
-    font-size: 1.5em;
+  .titulo {
+    margin-top: 2rem;
+    font-size: 2em;
   }
 
-  .formulario input, .formulario select, .formulario button {
-    padding: 8px;
-  }
-
-  .formulario button {
+  .contenedorFotos {
+    display: flex;
     width: 100%;
+    max-height: 70%;
+    max-width: 100%;
+    align-items: center;
+    border-radius: 0;
+  }
+
+  .cuentaRegresiva {
+    flex-direction: column;
+  }
+
+  .circulo {
+    width: 60px;
+    height: 60px;
+  }
+
+  header.navegation nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navegation nav ul li {
     margin: 10px 0;
   }
 }

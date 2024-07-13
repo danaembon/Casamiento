@@ -24,44 +24,47 @@ const Formulario = () => {
   };
 
   return (
-    <form className='formulario' onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="nombre">Nombre: </label>
-      <input
-        type="text"
-        id='nombre'
-        name='nombre'
-        {...register("nombre", {
-          required: "Nombre es requerido",
-          minLength: { value: 2, message: "Nombre debe tener al menos 2 caracteres" },
-          maxLength: { value: 15, message: "Nombre debe tener menos de 15 caracteres" }
-        })}
-      />
-      {errors.nombre && <span className="error">{errors.nombre.message}</span>}
-
-      <label htmlFor="apellido">Apellido: </label>
-      <input
-        type="text"
-        id='apellido'
-        name='apellido'
-        {...register("apellido", {
-          required: "Apellido es requerido",
-          minLength: { value: 2, message: "Apellido debe tener al menos 2 caracteres" },
-          maxLength: { value: 15, message: "Apellido debe tener menos de 15 caracteres" }
-        })}
-      />
-      {errors.apellido && <span className="error">{errors.apellido.message}</span>}
-
-      <label htmlFor="restComida">Preferencia en comidas: </label>
-      <select id="restComida" {...register("comida")}>
-        <option value="none">Ninguna</option>
-        <option value="vegano">Vegana</option>
-        <option value="vegetariano">Vegetariana</option>
-        <option value="sinGluten">Sin Gluten</option>
-      </select>
-      {errors.comida && <span className="error">Preferencia es requerida</span>}
-      
-      <br/>
-      <button type="submit">Confirmar</button>
+    <form className='formulario' onSubmit={handleSubmit(onSubmit)}> <div className="input-group">
+    <label htmlFor="nombre">Nombre: </label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      {...register("nombre", {
+        required: "Nombre es requerido",
+        minLength: { value: 2, message: "Nombre debe tener al menos 2 caracteres" },
+        maxLength: { value: 15, message: "Nombre debe tener menos de 15 caracteres" }
+      })}
+    />
+    {errors.nombre && <span className="error">{errors.nombre.message}</span>}
+  </div>
+  <div className="input-group">
+    <label htmlFor="apellido">Apellido: </label>
+    <input
+      type="text"
+      id="apellido"
+      name="apellido"
+      {...register("apellido", {
+        required: "Apellido es requerido",
+        minLength: { value: 2, message: "Apellido debe tener al menos 2 caracteres" },
+        maxLength: { value: 15, message: "Apellido debe tener menos de 15 caracteres" }
+      })}
+    />
+    {errors.apellido && <span className="error">{errors.apellido.message}</span>}
+  </div>
+  <div className="input-group">
+    <label htmlFor="restComida">Preferencia en comidas: </label>
+    <select id="restComida" {...register("comida")}>
+      <option value="none">Ninguna</option>
+      <option value="vegano">Vegana</option>
+      <option value="vegetariano">Vegetariana</option>
+      <option value="sinGluten">Sin Gluten</option>
+    </select>
+    {errors.comida && <span className="error">Preferencia es requerida</span>}
+  </div>
+  <div className="button-group">
+    <button type="submit">Confirmar</button>
+  </div>
     </form>
   );
 };
