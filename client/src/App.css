@@ -254,12 +254,13 @@ header.navegation nav ul li a:hover {
   padding: 0.4rem;
   margin-bottom: 20px;
   border-radius: 5px;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   margin-left: auto;
   margin-right: auto;
 }
-.formulario input:focus {
+.formulario input:focus-visible {
   border: 1px solid var(--color-highlight);
+  outline: none;
 }
 
 .formulario button {
