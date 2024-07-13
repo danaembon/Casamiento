@@ -74,25 +74,24 @@ function App() {
       </section>
       <section id="informacion">
   <article>
-
-      <div class="container-titulo-informacion">
-            <h2 class="titulo-informacion">Ceremonia y Fiesta</h2>
-            <svg width="100%" height="10" class="line-horizontal">
-                <path d="M0 5 Q 50 10 100 5 T 1000 5" />
-            </svg>
-        </div>
-        <div class="container-datos-informacion">
-            <h3 class="fecha-informacion datos">17 de Noviembre</h3>
-            <svg width="10" height="100%" class="line-vertical">
-                <path d="M5 0 Q 10 50 5 100 T 5 200" />
-            </svg>
-            <h3 class="lugar-informacion datos">Finca Madero - Pilar</h3>
-        </div>
-        <svg width="100%" height="10" class="line-horizontal">
-            <path d="M0 5 Q 50 10 100 5 T 1000 5" />
+  <div class="container-titulo-informacion">
+        <h2 class="titulo-informacion">Ceremonia y Fiesta</h2>
+        <svg width="25vw" height="10" class="line-horizontal">
+            <line x1="0" y1="5" x2="100%" y2="5" />
         </svg>
-        <p class="p">¿Cómo llegar?</p>
-
+    </div>
+    <div class="container-datos-informacion">
+        <h3 class="fecha-informacion datos">17 de Noviembre</h3>
+        <svg width="10" height="100%" class="line-vertical">
+            <line x1="5" y1="0" x2="5" y2="100%" />
+        </svg>
+        <h3 class="lugar-informacion datos">Finca Madero - Pilar</h3>
+    </div>
+    <svg width="25vw" height="10" class="line-horizontal">
+        <line x1="0" y1="5" x2="100%" y2="5" />
+    </svg>
+    <p class="p">¿Cómo llegar?</p>
+    
       <div className="map-container">
         <iframe 
           title="ubicacion al casamiento" 
