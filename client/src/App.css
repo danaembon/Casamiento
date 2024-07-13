@@ -118,7 +118,7 @@ h1 {
   text-align: center;
 }
 
-.icono-mapa {
+.icono-mapa, .icono-regalo {
   cursor: pointer;
   margin: 20px 0;
   animation: draw 4s infinite;
