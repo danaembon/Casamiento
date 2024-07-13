@@ -86,11 +86,11 @@ function App() {
         </svg>
     </div>
     <div class="container-datos-informacion">
-        <h3 class="fecha-informacion datos">17 de Noviembre</h3>
+        <h3 class="fecha-informacion datos">17 de Noviembre - 17:00</h3>
         <svg width="10" height="100%" class="line-vertical">
             <line x1="5" y1="0" x2="5" y2="100%" />
         </svg>
-          <h3 class="lugar-informacion datos">El Roble - Luis Jorge Fontana 900, Pilar </h3>
+          <h3 class="lugar-informacion datos">Finca Madero, El Roble - Luis Jorge Fontana 900, Pilar </h3>
     </div>
     <svg width="25vw" height="10" class="line-horizontal">
         <line x1="0" y1="5" x2="100%" y2="5" />
