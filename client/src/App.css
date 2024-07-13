@@ -144,7 +144,6 @@ iframe {
   width: 100px;
   height: 100px;
   background-color: none;
-  border-right-color: var(--color-primary);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -152,10 +151,13 @@ iframe {
   padding: 2px;
   margin: 10px;
   color: var(--color-primary);
-  box-shadow: var(--box-shadow);
 }
 
-.circulo:last-of-type {
+.containerCirculo {
+  border-right: 4px solid var(--color-primary);
+
+}
+.cuentaRegresiva > div:last-of-type .containerCirculo {
   border-right: none;
   border-left-color: var(--color-primary);
 }
