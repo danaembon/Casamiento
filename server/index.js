@@ -55,7 +55,7 @@ app.get('/api', async (req, res) => {
 // Endpoint to handle form submissions and add data to Google Sheets
 app.post('/addData', async (req, res) => {
   try {
-    const { nombre, apellido, comida, musica } = req.body;
+    const { nombre, apellido, comida, cancion } = req.body;
 
     // Google authentication configuration using service account JSON file
     const auth = new google.auth.GoogleAuth({
@@ -74,7 +74,7 @@ app.post('/addData', async (req, res) => {
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: [
-          [nombre, apellido, comida, musica]
+          [nombre, apellido, comida, cancion]
         ],
       },
     });
