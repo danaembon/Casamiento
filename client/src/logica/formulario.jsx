@@ -63,10 +63,10 @@ const Formulario = () => {
     </select>
     {errors.comida && <span className="error">Preferencia es requerida</span>}
   </div>
+  {confirmado && <p className="confirmacion">Confirmado</p>}
   <div className="button-group">
     <button type="submit">Confirmar</button>
   </div>
-  {confirmado && <p className="confirmacion">Confirmado</p>}
     </form>
   );
 };

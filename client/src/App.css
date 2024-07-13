@@ -158,7 +158,9 @@ iframe {
   padding: 0;
 }
 
-
+.countDown{
+  margin-bottom: 10rem;
+}
 .cuentaRegresiva {
   display: flex;
   justify-content: center;
@@ -314,6 +316,8 @@ header.navegation nav ul li a:hover {
   color: var(--color-primary);
   background-color: var(--color-secondary);
   box-sizing: border-box; /* Ensure padding is included in width calculation */
+  border: none;
+  outline: none;
 }
 
 .input-group input:focus-visible, .input-group select:focus-visible {

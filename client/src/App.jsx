@@ -74,7 +74,7 @@ function App() {
           </span>
         </div>
       </section>
-      <section>
+      <section className='countDown'>
         <CountdownTimer/>
       </section>
       <section id="informacion">
