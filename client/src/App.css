@@ -62,18 +62,13 @@ h1 {
 }
 
 .container-datos-informacion {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
-  position: relative;
-}
-
-.lugar-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .fecha-informacion, .lugar-informacion {
