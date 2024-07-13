@@ -374,7 +374,7 @@ a {
   }
 }
 
-.heart {
+.infinity {
   display: inline-block;
   width: 7rem; /* Set a fixed width */
   height: 7rem; /* Set a fixed height to make it a square */
@@ -382,7 +382,7 @@ a {
   position: relative;
 }
 
-.heart svg {
+.infinity svg {
   fill: none;
   stroke: var(--color-primary);
   stroke-width: 2px;
@@ -392,12 +392,12 @@ a {
   height: 100%;
 }
 
-.heart-path {
+.infinity-path {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.heart svg path {
+.infinity svg path {
   stroke: var(--color-primary);
 }
 

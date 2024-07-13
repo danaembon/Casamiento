@@ -65,13 +65,16 @@ function App() {
           <hr className="linea-separadora-inicio titulo"/>
           <h1 className='titulo'>IyM</h1>
           <hr className="linea-separadora-inicio invitamos"/>
-          <h2 className='subtitulo'>Los invitamos a nuetro casamiento</h2>
-          <span className='heart'>
-          <svg viewBox="-10 0 52 32">
-              <path className='heart-path' d="M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.7,0,0,3.7,0,8.4c0,4.5,3.8,8.1,9.4,13.2
-                l6.6,5.9l6.6-5.9c5.6-5.1,9.4-8.7,9.4-13.2C32,3.7,28.3,0,23.6,0z" />
+          <h2 className='subtitulo'>Queremos compartir este momento junto a vos</h2>
+          <span className='infinity'>
+            <svg viewBox="0 0 100 50">
+              <path className='infinity-path' d="M49.6,25c-4.6,0-8.4,3.8-8.4,8.4s3.8,8.4,8.4,8.4c4.6,0,8.4-3.8,8.4-8.4C58,28.8,54.2,25,49.6,25z M24.4,25
+                c-4.6,0-8.4,3.8-8.4,8.4s3.8,8.4,8.4,8.4c4.6,0,8.4-3.8,8.4-8.4C32.8,28.8,29,25,24.4,25z M24.4,33.4c-2.1,0-3.8-1.7-3.8-3.8
+                s1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8S26.5,33.4,24.4,33.4z M49.6,33.4c-2.1,0-3.8-1.7-3.8-3.8s1.7-3.8,3.8-3.8
+                c2.1,0,3.8,1.7,3.8,3.8S51.7,33.4,49.6,33.4z"/>
             </svg>
-          </span>
+          </span> 
+
         </div>
       </section>
       <section id="informacion">
