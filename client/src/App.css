@@ -73,7 +73,7 @@ h1 {
 
 #informacion {
   padding: 4rem 2rem;
-  margin-top: 3rem;
+  margin-top: 0;
   margin-bottom: 3rem;
   background-color: var(--color-terciario);
   color: var(--color-secondary);
@@ -228,48 +228,54 @@ header.navegation nav ul li a:hover {
   color: var(--color-hover);
 }
 
-.sectionConfirmar {
-  margin: var(--margin-section);
+.formulario-container {
+  background-color: var(--color-secondary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+.formulario h2 {
+  margin-bottom: 20px;
 }
 
-form label {
+.formulario label {
   display: block;
-  margin: 0.2rem;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
-form input {
-  width: 50%;
-  margin-bottom: 0.5rem;
+.formulario input, .formulario select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-accent);
+  border-radius: 5px;
+  background-color: #444;
+  color: var(--color-text);
 }
 
-button {
-  border-radius: var(--border-radius);
-  border: 1px solid transparent;
-  padding: var(--padding-button);
-  font-size: var(--font-size-button);
-  font-weight: var(--font-weight-main);
-  font-family: inherit;
-  background-color: #1a1a1a;
-  color: var(--color-secondary);
+.formulario button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-accent);
+  color: var(--color-text);
   cursor: pointer;
-  transition: border-color 0.25s;
+  font-weight: bold;
 }
 
-button:hover {
-  border-color: var(--color-highlight);
+.formulario button:last-child {
+  background-color: var(--color-text);
+  color: var(--color-secondary);
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.formulario button:hover {
+  opacity: 0.8;
 }
 
 a {
@@ -352,9 +358,24 @@ a {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  .formulario-container {
+    padding: 15px;
+  }
+
+  .formulario h2 {
+    font-size: 1.5em;
+  }
+
+  .formulario input, .formulario select, .formulario button {
+    padding: 8px;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
   #informacion {
     padding: 2rem 1rem;
-    margin-top: 2rem;
+    margin-top: 0;
     margin-bottom: 2rem;
   }
   .titulo-informacion {
@@ -387,7 +408,7 @@ a {
   .contenedorFotos {
     display: flex;
     width: 100%;
-    max-height: 100%;
+    max-height: 70%;
     max-width: 100%;
     align-items: center;
     border-radius: 0;
