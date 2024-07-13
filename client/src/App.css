@@ -122,6 +122,12 @@ h1 {
 .regalo {
   margin-top: 2rem;
 }
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
 
 .icono-mapa, .icono-regalo {
   cursor: pointer;

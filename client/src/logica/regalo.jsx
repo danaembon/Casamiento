@@ -11,6 +11,7 @@ const Regalo = () => {
     <div className='regalo'>
 
         <p className='p-regalo datos' onClick={handleIconClick}>Si deseas regalarnos algo más que tu hermosa presencia...</p>
+        <div className='center-container'>
         <span className='icono-regalo' onClick={handleIconClick}>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-gift" width="60" height="60" viewBox="0 0 30 30" stroke-width="1.5" stroke="#f1eded" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -20,6 +21,7 @@ const Regalo = () => {
         <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />
         </svg>
         </span>
+        </div>
         {mostrarRegalo && (
             <p className='datos'>Plata plata mucha plata (diganme que pongo aca)</p>
         )}
