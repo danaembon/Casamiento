@@ -62,13 +62,11 @@ h1 {
 }
 
 .container-datos-informacion {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 2rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
+  position: relative;
 }
 
 .fecha-informacion, .lugar-informacion {
