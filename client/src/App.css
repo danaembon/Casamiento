@@ -525,12 +525,11 @@ a {
   }
 
   .circulo {
-    font-size: 1.5rem;
-    width: 60px;
-    height: 60px;
+    font-size: 1.3rem;
   }
   .containerCirculo p{
     margin: 0;
+    font-size: 0.9rem;
   }
   .containerCirculo {
     padding: 0.4rem;
