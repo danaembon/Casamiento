@@ -47,22 +47,23 @@ const CountdownTimer = () => {
   
     return (
       <div className='cuentaRegresiva'>
+        <h2 className="">Faltan</h2>
         {/* <div className='mes circulo'><p>{timeLeft.months} meses</p></div>
         <div className='semana circulo'><p>{timeLeft.weeks} semanas</p></div> */}
         <div className='containerCirculo'>
-          <p>Días</p>
+          <p>días</p>
           <div className='dia circulo'><p>{timeLeft.days}</p></div>
         </div>
         <div className='containerCirculo'>
-          <p>Horas</p>
+          <p>hs</p>
           <div className='hora circulo'><p>{timeLeft.hours}</p></div>
         </div>
         <div className='containerCirculo'>
-          <p>Minutos</p>
+          <p>min</p>
           <div className='minutos circulo'><p>{timeLeft.minutes}</p></div>
           </div>
         <div className='ultimoCirculo'>
-          <p>Segundos</p>
+          <p>seg</p>
           <div className='segundos circulo'><p>{timeLeft.seconds} </p></div>
         </div>
       </div>
