@@ -75,6 +75,7 @@ function App() {
         </div>
       </section>
       <section className='countDown'>
+        <h2 className="faltan">Faltan</h2>
         <CountdownTimer/>
       </section>
       <section id="informacion">
