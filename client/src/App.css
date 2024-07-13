@@ -2,9 +2,9 @@
   --font-family-main: "Lora", serif;
   --font-family-heading: "Lora", serif;
   --font-family-countdown: "Lora", serif;
-  --color-primary: #242424;
+  --color-primary: #302d2d;
   --color-secondary: #f1eded;
-  --color-terciario: #4b4646;
+  --color-terciario: #302d2d;
   --color-hover: rgba(194, 194, 194, 0.87);
   --color-highlight: #646cff;
   --color-error: tomato;
@@ -52,6 +52,15 @@ h1 {
   fill: none;
 }
 
+.line-horizontal, .line-vertical {
+  animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  25%, 75% { opacity: 1; }
+}
+
 .container-titulo-informacion {
   text-align: center;
   margin-bottom: 0;
@@ -63,6 +72,7 @@ h1 {
 }
 
 #informacion {
+  padding: 4rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   background-color: var(--color-terciario);
@@ -104,8 +114,8 @@ h1 {
 }
 
 iframe {
-  width: 400px;
-  height: 400px;
+  width: 20rem;
+  height: 15rem;
 }
 
 .inicio {
