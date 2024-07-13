@@ -387,6 +387,7 @@ a {
 /* Media Queries */
 @media (max-width: 768px) {
   .formulario-container {
+  margin-top: 0;
   padding: 15px;
   border-radius: 0;
   background-color: var(--color-secondary);
@@ -415,7 +416,7 @@ a {
   #informacion {
     padding: 2rem 1rem;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
   .titulo-informacion {
     font-size: 1.5rem;
