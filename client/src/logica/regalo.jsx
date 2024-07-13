@@ -9,8 +9,8 @@ const Regalo = () => {
 
   return(
     <div className='regalo'>
-        
-        <p className='p-regalo datos' onClick={handleIconClick}>Si deseas reagalarnos algo más que tu hermosa presencia...</p>
+
+        <p className='p-regalo datos' onClick={handleIconClick}>Si deseas regalarnos algo más que tu hermosa presencia...</p>
         <span className='icono-regalo' onClick={handleIconClick}>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-gift" width="60" height="60" viewBox="0 0 30 30" stroke-width="1.5" stroke="#f1eded" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
