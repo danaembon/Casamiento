@@ -67,16 +67,10 @@ function App() {
           <hr className="linea-separadora-inicio invitamos"/>
           <h2 className='subtitulo'>Queremos compartir este momento junto a vos</h2>
           <span className='infinity'>
-            <svg viewBox="0 0 100 50">
-              <path className='infinity-path' d="M49.6,25c-4.6,0-8.4,3.8-8.4,8.4s3.8,8.4,8.4,8.4c4.6,0,8.4-3.8,8.4-8.4C58,28.8,54.2,25,49.6,25z M24.4,25
-                c-4.6,0-8.4,3.8-8.4,8.4s3.8,8.4,8.4,8.4c4.6,0,8.4-3.8,8.4-8.4C32.8,28.8,29,25,24.4,25z M24.4,33.4c-2.1,0-3.8-1.7-3.8-3.8
-                s1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8S26.5,33.4,24.4,33.4z M49.6,33.4c-2.1,0-3.8-1.7-3.8-3.8s1.7-3.8,3.8-3.8
-                c2.1,0,3.8,1.7,3.8,3.8S51.7,33.4,49.6,33.4z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="infinity icon icon-tabler icon-tabler-infinity" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-              <path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-            </svg>  
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#302d2d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+          </svg>
           </span> 
 
         </div>

@@ -384,7 +384,6 @@ a {
 
 .infinity svg {
   fill: none;
-  stroke: var(--color-primary);
   stroke-width: 2px;
   stroke-dasharray: 100 100;
   animation: draw 4s infinite;
@@ -392,9 +391,6 @@ a {
   height: 100%;
 }
 
-.infinity svg path {
-  stroke: var(--color-primary);
-}
 
 .texto {
   margin: auto;
