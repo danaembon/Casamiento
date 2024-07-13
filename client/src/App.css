@@ -399,8 +399,9 @@ a {
 
 .input-group input, .input-group select, .button-group button {
   padding: 8px;
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .button-group {
