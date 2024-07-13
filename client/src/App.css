@@ -8,6 +8,7 @@
   --color-hover: rgba(194, 194, 194, 0.87);
   --color-highlight: #646cff;
   --color-error: tomato;
+  --color-true: rgb(79, 223, 60);
   --font-weight-main: 500;
   --font-weight-heading: 400;
   --font-size-heading: 3.2em;
@@ -356,6 +357,12 @@ a {
   transition: transform 0.3s ease;
 }
 
+.confirmacion {
+  color: var(--color-true);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 .error {
   display: block;
   color: var(--color-error);
@@ -386,6 +393,10 @@ a {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
   .formulario-container {
   margin-top: 0;
   padding: 15px;

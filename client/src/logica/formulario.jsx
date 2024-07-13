@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useForm } from 'react-hook-form';
 import axios from '../axiosConfig.js';  // Asegúrate de que la ruta sea correcta
 
 const Formulario = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [confirmado, setConfirmado] = useState(false);
 
   const onSubmit = async (data) => {
     try {
@@ -12,7 +13,7 @@ const Formulario = () => {
   
       if (response.status === 200) {
         console.log('Formulario enviado exitosamente!');
-        alert('Formulario enviado exitosamente!');
+        setConfirmado(true);
         reset(); // Reset the form after successful submission
       } else {
         throw new Error('Error al enviar formulario');
@@ -65,6 +66,7 @@ const Formulario = () => {
   <div className="button-group">
     <button type="submit">Confirmar</button>
   </div>
+  {confirmado && <p className="confirmacion">Confirmado</p>}
     </form>
   );
 };
