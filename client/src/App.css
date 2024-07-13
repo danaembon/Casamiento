@@ -522,13 +522,19 @@ a {
   .fecha {
     margin-top: 4rem;
   }
-
+  .segundos {
+    border-right: none;
+    border-left: 2px solid var(--color-primary);
+  }
   .circulo {
     font-size: 1.3rem;
+    border-right: 2px solid var(--color-primary);
   }
+
 
   .ultimoCirculo{
     padding: 0.4rem;
+    border: none;
   }
   .ultimoCirculo p{
     margin: 0;
@@ -539,6 +545,7 @@ a {
     font-size: 0.9rem;
   }
   .containerCirculo {
+    border: none;
     padding: 0.4rem;
   }
 
