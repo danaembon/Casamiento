@@ -75,29 +75,23 @@ function App() {
       <section id="informacion">
   <article>
 
-      <div className='container-titulo-informacion'>
-          <h2 className="titulo-informacion">
-            Ceremonia y Fiesta
-          </h2>
-          <svg className='linea-vertical' width="100" height="500">
-              <line x1="50" y1="10" x2="50" y2="490" stroke="#ff7e5f" stroke-width="5" /> //linea vertical
-          </svg>
+      <div class="container-titulo-informacion">
+            <h2 class="titulo-informacion">Ceremonia y Fiesta</h2>
+            <svg width="100%" height="10" class="line-horizontal">
+                <path d="M0 5 Q 50 10 100 5 T 1000 5" />
+            </svg>
         </div>
-
-        <div className='container-datos-informacion'>
-          <h3 className='fecha-informacion datos'>17 de Noviembre</h3>
-          <svg className='linea-horizontal' width="500" height="100">
-              <line x1="50" y1="10" x2="50" y2="490" stroke="#ff7e5f" stroke-width="5" />
-          </svg>
-          <h3 className="lugar-informacion datos">Finca Madero - Pilar</h3>
+        <div class="container-datos-informacion">
+            <h3 class="fecha-informacion datos">17 de Noviembre</h3>
+            <svg width="10" height="100%" class="line-vertical">
+                <path d="M5 0 Q 10 50 5 100 T 5 200" />
+            </svg>
+            <h3 class="lugar-informacion datos">Finca Madero - Pilar</h3>
         </div>
-
-        
-        <svg className='linea-horizontal' width="100" height="500">
-            <line x1="50" y1="10" x2="50" y2="490" stroke="#ff7e5f" stroke-width="5" /> //linea vertical
+        <svg width="100%" height="10" class="line-horizontal">
+            <path d="M0 5 Q 50 10 100 5 T 1000 5" />
         </svg>
-
-        <p>¿Cómo llegar?</p>
+        <p class="p">¿Cómo llegar?</p>
 
       <div className="map-container">
         <iframe 

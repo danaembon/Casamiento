@@ -46,41 +46,50 @@ h1 {
 }
 
 
-.container-datos-informacion {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  padding: 20px;
+.line-horizontal path, .line-vertical path {
+  stroke: var(--color-primary);
+  stroke-width: 5;
+  fill: none;
 }
-.linea-vertical {
-  width: 100px;
-  height: 100%;
-  width: 0 auto 0;
-}
-.linea-horizontal {
-  width: 500px;
-  height: 100px;
-  margin: 0;
-  padding: 0;
+
+.line-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 .container-datos-informacion{
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.fecha-informacion, .lugar-informacion {
+  margin: 0 20px;
 }
 
 .container-titulo-informacion {
-  display: inline-block;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .titulo-informacion {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-heading);
   font-weight: var(--font-weight-heading);
+  margin: 0;
 }
-
+.p {
+  text-align: center;
+  margin-top: 20px;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-main);
+}
 .datos {
-  padding: 20px;
   font-family: var(--font-family-main);
   font-size: var(--font-size-subtitle);
   font-weight: var(--font-weight-main);
