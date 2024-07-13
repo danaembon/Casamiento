@@ -472,7 +472,9 @@ a {
 .button-group {
   flex-direction: column;
 }
-
+.faltan {
+  display: block;
+}
 .button-group button {
   width: 100%;
   margin-bottom: 10px;

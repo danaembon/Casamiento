@@ -19,6 +19,6 @@ import React from 'react';
 
     }, []);
 
-    return <img className='fotos' src={PHOTOS[index]} alt="random"></img>
+    return <img className='fotos' src={PHOTOS[index]} alt="foto en la que aparecen Iair y Michu"></img>
   }
   export default PhotoChanger;
