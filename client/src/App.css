@@ -398,16 +398,16 @@ a {
   font-size: 1.5em;
 }
 
+.input-group label {
+  color: var(--color-primary);
+}
+
 .input-group input, .input-group select, .button-group button {
   padding: 8px;
   color: var(--color-secondary);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
-label {
-  color: var(--color-primary);
-}
-
 .button-group {
   flex-direction: column;
 }
@@ -419,7 +419,7 @@ label {
   #informacion {
     padding: 2rem 1rem;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
   .titulo-informacion {
     font-size: 1.5rem;
