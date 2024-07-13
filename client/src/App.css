@@ -284,6 +284,7 @@ header.navegation nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10rem;
 }
 
 .formulario {
@@ -447,7 +448,6 @@ a {
 @media (max-width: 768px) {
   .formulario-container {
   margin-top: 0;
-  margin-bottom: 5rem;
   padding: 15px;
   border-radius: 0;
 }
