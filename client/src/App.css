@@ -185,13 +185,14 @@ iframe {
   font-size: 3rem;
 }
 
-.containerCirculo {
-  border-right: 4px solid var(--color-primary);
-
-}
 .ultimoCirculo{ 
   border-right: none;
   border-left-color: var(--color-primary);
+}
+
+.containerCirculo {
+  border-right: 4px solid var(--color-primary);
+
 }
 
 .cuentaRegresiva {
