@@ -61,7 +61,7 @@ const CountdownTimer = () => {
           <p>Minutos</p>
           <div className='minutos circulo'><p>{timeLeft.minutes}</p></div>
           </div>
-        <div className='containerCirculo'>
+        <div className='containerCirculo ultimoCirculo'>
           <p>Segundos</p>
           <div className='segundos circulo'><p>{timeLeft.seconds} </p></div>
         </div>
