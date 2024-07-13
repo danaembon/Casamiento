@@ -407,8 +407,8 @@ a {
   border: 0;
   height: 2px;
   background: var(--color-primary);
-  margin: var(--margin) auto;
-  width: 40%;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .subtitulo {
