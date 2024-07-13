@@ -9,7 +9,7 @@ const MapComponent = () => {
 
   return (
     <div className="map-wrapper">
-      <p className="p">¿Cómo llegar?</p>
+      <p className="p datos" onClick={handleIconClick}>¿Cómo llegar?</p>
       <span className='icono-mapa' onClick={handleIconClick}>
         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-map-pin" width="60" height="60" viewBox="0 0 30 30" stroke-width="1.5" stroke="#f1eded" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

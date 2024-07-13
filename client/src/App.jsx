@@ -4,6 +4,7 @@ import CountdownTimer from './logica/countDown.jsx'
 import PhotoChanger  from './logica/photos.jsx'
 import Formulario from './logica/formulario.jsx'
 import MapComponent from './logica/mapa.jsx'
+import Regalo from './logica/regalo.jsx';
 
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
         <line x1="0" y1="5" x2="100%" y2="5" />
     </svg>
     <MapComponent/>
+    <Regalo></Regalo>
   </article>
 </section>
 
