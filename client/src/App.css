@@ -138,6 +138,7 @@ iframe {
   font-family: var(--font-family-countdown);
   font-weight: bold;
   flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
 .circulo {
@@ -149,8 +150,8 @@ iframe {
   align-items: center;
   overflow: hidden;
   padding: 2px;
-  margin: 10px;
   color: var(--color-primary);
+  font-size: 3rem;
 }
 
 .containerCirculo {
@@ -160,6 +161,10 @@ iframe {
 .cuentaRegresiva:last-child{
   border-right: none;
   border-left-color: var(--color-primary);
+}
+
+.cuentaRegresiva {
+  margin: 2rem auto; 
 }
 
 .contenedorFotos {
