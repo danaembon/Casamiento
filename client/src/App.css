@@ -376,19 +376,7 @@ a {
 
 .infinity {
   display: inline-block;
-  width: 7rem; /* Set a fixed width */
-  height: 7rem; /* Set a fixed height to make it a square */
-  background: none;
   position: relative;
-}
-
-.infinity svg {
-  fill: none;
-  stroke-width: 2px;
-  stroke-dasharray: 100 100;
-  animation: draw 4s infinite;
-  width: 100%;
-  height: 100%;
 }
 
 
