@@ -528,6 +528,14 @@ a {
   .circulo {
     font-size: 1.3rem;
   }
+
+  .ultimoCirculo{
+    padding: 0.4rem;
+  }
+  .ultimoCirculo p{
+    margin: 0;
+    font-size: 0.9rem;
+  }
   .containerCirculo p{
     margin: 0;
     font-size: 0.9rem;
