@@ -72,7 +72,7 @@ h1 {
 #informacion {
   padding: 4rem 2rem;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10rem;
   background-color: var(--color-terciario);
   color: var(--color-secondary);
   box-shadow: var(--box-shadow);
@@ -151,7 +151,7 @@ iframe {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 10rem;
+  margin-bottom: 0;
   padding: 0;
   box-shadow: var(--box-shadow);
 }
@@ -442,32 +442,20 @@ a {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  button {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-  }
   .formulario-container {
   margin-top: 0;
   margin-bottom: 5rem;
   padding: 15px;
   border-radius: 0;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
 }
 
 .formulario h2 {
   font-size: 1.5em;
 }
 
-.input-group label {
-  color: var(--color-primary);
-}
 
 .input-group input, .input-group select, .button-group button {
   padding: 8px;
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
 }
 .button-group {
   flex-direction: column;
