@@ -392,11 +392,6 @@ a {
   height: 100%;
 }
 
-.infinity-path {
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .infinity svg path {
   stroke: var(--color-primary);
 }
