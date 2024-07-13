@@ -85,13 +85,15 @@ function App() {
         <svg width="10" height="100%" class="line-vertical">
             <line x1="5" y1="0" x2="5" y2="100%" />
         </svg>
-        <h3 class="lugar-informacion datos">Finca Madero - Pilar</h3>
+        <div className='lugar-container'>
+          <h3 class="lugar-informacion datos">Finca Madero - Pilar</h3>
+        </div>
     </div>
     <svg width="25vw" height="10" class="line-horizontal">
         <line x1="0" y1="5" x2="100%" y2="5" />
     </svg>
     <p class="p">¿Cómo llegar?</p>
-    
+
       <div className="map-container">
         <iframe 
           title="ubicacion al casamiento" 
