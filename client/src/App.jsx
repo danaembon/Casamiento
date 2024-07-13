@@ -74,20 +74,31 @@ function App() {
       </section>
       <section id="informacion">
   <article>
-    <h2 className="titulo-informacion">
-      Ceremonia y Fiesta
-      <span className="flecha-abajo">↓</span>
-    </h2>
-    <div className="info-container">
-      <div className="info-item">
-        <h3>17 de Noviembre</h3>
-      </div>
-      <div className="info-item shorter-border">
-        <h3>Finca Madero - Pilar</h3>
-      </div>
-      <div className="info-item full-width">
+
+      <div className='container-titulo-informacion'>
+          <h2 className="titulo-informacion">
+            Ceremonia y Fiesta
+          </h2>
+          <svg className='linea-vertical' width="100" height="500">
+              <line x1="50" y1="10" x2="50" y2="490" stroke="#ff7e5f" stroke-width="5" /> //linea vertical
+          </svg>
+        </div>
+
+        <div className='container-datos-informacion'>
+          <h3 className='fecha-informacion datos'>17 de Noviembre</h3>
+          <svg className='linea-horizontal' width="500" height="100">
+              <line x1="50" y1="10" x2="50" y2="490" stroke="#ff7e5f" stroke-width="5" />
+          </svg>
+          <h3 className="lugar-informacion datos">Finca Madero - Pilar</h3>
+        </div>
+
+        
+        <svg className='linea-horizontal' width="100" height="500">
+            <line x1="50" y1="10" x2="50" y2="490" stroke="#ff7e5f" stroke-width="5" /> //linea vertical
+        </svg>
+
         <p>¿Cómo llegar?</p>
-      </div>
+
       <div className="map-container">
         <iframe 
           title="ubicacion al casamiento" 
@@ -98,7 +109,7 @@ function App() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </div>
+
   </article>
 </section>
 
