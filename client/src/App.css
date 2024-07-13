@@ -528,9 +528,13 @@ a {
   .fecha {
     margin-top: 4rem;
   }
-
+  .countDown {
+    margin-top: 9rem;
+  }
   .circulo {
     font-size: 1.3rem;
+    height: 40px;
+    width: 40px;
   }
 
   .ultimoCirculo{
@@ -538,11 +542,11 @@ a {
   }
   .ultimoCirculo p{
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   .containerCirculo p{
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   .containerCirculo {
     padding: 0.4rem;

@@ -74,10 +74,6 @@ function App() {
           </span>
         </div>
       </section>
-      <section className='countDown'>
-        <h2 className="faltan">Faltan</h2>
-        <CountdownTimer/>
-      </section>
       <section id="informacion">
   <article>
   <div class="container-titulo-informacion">
@@ -101,6 +97,10 @@ function App() {
   </article>
 </section>
 
+      <section className='countDown'>
+        <h2 className="faltan">Faltan</h2>
+        <CountdownTimer/>
+      </section>
 
       <section id='confirmar' className='sectionConfirmar'>
         <article className='formulario-container'>
