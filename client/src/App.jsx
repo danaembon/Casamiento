@@ -108,7 +108,7 @@ function App() {
 
 
       <section id='confirmar' className='sectionConfirmar'>
-        <article className='"formulario-container"'>
+        <article className='formulario-container'>
           <h2>Confirmar Asistencia</h2>
           <h3>Se puede confirmar hasta el 1 de Agosto</h3>
           <Formulario />
