@@ -51,7 +51,7 @@ function App() {
       <header ref={navRef} className='navegation'>
         <nav>
           <ul>
-            <li><a href="#informacion">Infomacion</a></li>
+            <li><a href="#informacion">Infomación</a></li>
             <li><a href="#confirmar">Confirmar</a></li>
           </ul>
         </nav>

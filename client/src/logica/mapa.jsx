@@ -10,7 +10,6 @@ const MapComponent = () => {
   return (
     <div className="map-wrapper">
       <p className="p datos" onClick={handleIconClick}>¿Cómo llegar?</p>
-      <div className='center-container'>
       <span className='icono-mapa' onClick={handleIconClick}>
         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-map-pin" width="60" height="60" viewBox="0 0 30 30" stroke-width="1.5" stroke="#f1eded" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -18,7 +17,6 @@ const MapComponent = () => {
           <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
         </svg>
       </span>
-      </div>
       {!mostrarMapa && (
         <svg width="25vw" height="10" class="line-horizontal">
         <line x1="0" y1="5" x2="100%" y2="5" />
