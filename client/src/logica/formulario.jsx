@@ -73,7 +73,7 @@ const Formulario = () => {
       name="cancion"
       {...register("cancion", {
         minLength: { value: 2, message: "Canción debe tener al menos 2 caracteres" },
-        maxLength: { value: 15, message: "Canción debe tener menos de 15 caracteres" }
+        maxLength: { value: 50, message: "Canción debe tener menos de 15 caracteres" }
       })}
     />
     {errors.cancion && <span className="error">{errors.cancion.message}</span>}
