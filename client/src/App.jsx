@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useRef, useEffect, useState } from 'react';
 import CountdownTimer from './logica/countDown.jsx'
-import Photos from './photos';
+import Photos from './photos.jsx';
 import Formulario from './logica/formulario.jsx'
 import MapComponent from './logica/mapa.jsx'
 import Regalo from './logica/regalo.jsx';
