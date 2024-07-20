@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useRef, useEffect, useState } from 'react';
 import CountdownTimer from './logica/countDown.jsx'
-import PhotoChanger  from './logica/photos.jsx'
+import Photos from './photos';
 import Formulario from './logica/formulario.jsx'
 import MapComponent from './logica/mapa.jsx'
 import Regalo from './logica/regalo.jsx';
@@ -58,7 +58,7 @@ function App() {
       </header>
       <section className='inicio'>
         <div className='contenedorFotos'>
-          <PhotoChanger />
+          <Photos />
         </div>
         <div className='texto'>
           <p className='fecha'>17-11-24</p>
