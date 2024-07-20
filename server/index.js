@@ -3,6 +3,7 @@ const express = require('express');
 const { google } = require('googleapis');
 const cors = require('cors');
 const fs = require('fs');
+const sharp = require('sharp');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -82,6 +83,25 @@ app.post('/addData', async (req, res) => {
     res.status(200).json({ message: 'Data added successfully' });
   } catch (error) {
     console.error('Error in /addData:', error.message, error.stack);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Endpoint to optimize images
+app.get('/optimized-images/:filename', async (req, res) => {
+  const { filename } = req.params;
+  const inputPath = path.join(__dirname, '../client/public/assets', filename);
+
+  try {
+    const image = await sharp(inputPath)
+      .resize({ width: 800 }) // Resize the image
+      .webp({ quality: 80 }) // Convert to WebP format with 80% quality
+      .toBuffer();
+
+    res.type('image/webp');
+    res.send(image);
+  } catch (error) {
+    console.error('Error optimizing image:', error.message, error.stack);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
