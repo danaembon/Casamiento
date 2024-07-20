@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PHOTOS from './consts';
+import './App.css';
 
 const Photos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
