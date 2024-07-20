@@ -530,7 +530,6 @@ a {
   }
 }
 
-
 /* App.css */
 
 .carousel {
@@ -558,30 +557,34 @@ a {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent; /* Eliminar fondo */
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+  padding-right: 50px; /* Ajuste para desplazar a la derecha */
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  padding-left: 50px; /* Ajuste para desplazar a la izquierda */
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 .dots {
   text-align: center;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 10px;
   width: 100%;
@@ -592,9 +595,10 @@ a {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparent; /* Eliminar fondo */
   border-radius: 50%;
   display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Bordes */
   transition: background-color 0.6s ease;
 }
 
