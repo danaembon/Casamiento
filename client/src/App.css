@@ -545,13 +545,12 @@ a {
   transition: transform 0.5s ease;
 }
 
-.carousel-image {
-  width: 100%;
-  display: none;
+.carousel-image-container {
+  flex: 0 0 auto;
 }
 
-.carousel-image.active {
-  display: block;
+.carousel-image {
+  width: 100%;
 }
 
 .prev, .next {

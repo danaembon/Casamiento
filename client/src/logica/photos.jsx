@@ -25,15 +25,16 @@ const Photos = () => {
 
   return (
     <div className="carousel">
-      <div className="carousel-images" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+      <div className="carousel-images" style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${PHOTOS.length * 100}%` }}>
         {PHOTOS.map((photo, index) => (
-          <img
-            key={index}
-            src={photo.src}
-            alt={photo.alt}
-            className={`carousel-image ${index === currentSlide ? 'active' : ''}`}
-            loading="lazy"
-          />
+          <div key={index} className="carousel-image-container" style={{ width: `${100 / PHOTOS.length}%` }}>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className={`carousel-image ${index === currentSlide ? 'active' : ''}`}
+              loading="lazy"
+            />
+          </div>
         ))}
       </div>
       <a className="prev" onClick={prevSlide}>&#10094;</a>
