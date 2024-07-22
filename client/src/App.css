@@ -603,7 +603,8 @@ a {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 9px;
+  margin: 10px;
   color: rgba(255, 255, 255, 0.808);
   font-weight: bold;
   font-size: 30px;
@@ -616,12 +617,10 @@ a {
 
 .prev {
   left: 0;
-  padding-right: 50px; /* Ajuste para desplazar a la derecha */
 }
 
 .next {
   right: 0;
-  padding-left: 50px; /* Ajuste para desplazar a la izquierda */
 }
 
 .prev:hover, .next:hover {
