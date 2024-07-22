@@ -20,11 +20,7 @@ const MapComponent = () => {
       <div className="ver-mas-container">
         <button onClick={handleIconClick} className="ver-mas-button">Ver más</button>
       </div>
-      {!mostrarMapa && (
-        <svg width="25vw" height="10" class="line-horizontal">
-        <line x1="0" y1="5" x2="100%" y2="5" />
-        </svg>
-      )}
+      
       {mostrarMapa && (
         <div className="map-container">
           <iframe 
