@@ -27,7 +27,7 @@ const Formulario = () => {
   return (
     <form className='formulario' onSubmit={handleSubmit(onSubmit)}> 
     <div className="input-group">
-    <label htmlFor="nombre">Nombre: </label>
+    <label htmlFor="nombre" className='required'>Nombre: </label>
     <input
       type="text"
       id="nombre"
@@ -41,7 +41,7 @@ const Formulario = () => {
     {errors.nombre && <span className="error">{errors.nombre.message}</span>}
   </div>
   <div className="input-group">
-    <label htmlFor="apellido">Apellido: </label>
+    <label htmlFor="apellido" className='required'>Apellido: </label>
     <input
       type="text"
       id="apellido"
@@ -55,7 +55,7 @@ const Formulario = () => {
     {errors.apellido && <span className="error">{errors.apellido.message}</span>}
   </div>
   <div className="input-group">
-    <label htmlFor="restComida">Preferencia en comidas: </label>
+    <label htmlFor="restComida" className='required'>Preferencia en comidas: </label>
     <select id="restComida" {...register("comida")}>
       <option value="none">Ninguna</option>
       <option value="vegano">Vegana</option>
