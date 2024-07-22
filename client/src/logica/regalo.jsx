@@ -20,7 +20,9 @@ const Regalo = () => {
         <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />
         </svg>
         </span>
+        <div className="ver-mas-container">
         <button onClick={handleIconClick} className="ver-mas-button">Ver más</button>
+        </div>
         {mostrarRegalo && (
             <p className='datos'>Plata plata mucha plata (diganme que pongo aca)</p>
         )}

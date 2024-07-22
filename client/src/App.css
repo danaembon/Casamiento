@@ -131,6 +131,11 @@ h1 {
   margin-top: 2rem;
 }
 
+.ver-mas-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
 .ver-mas-button {
   background-color: var(--color-secondary);
