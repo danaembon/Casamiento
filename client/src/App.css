@@ -638,8 +638,8 @@ a {
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: transparent; /* Eliminar fondo */
   border-radius: 50%;
