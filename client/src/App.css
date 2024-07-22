@@ -535,11 +535,8 @@ a {
     align-items: center;
     border-radius: 0;
     box-shadow: var(--box-shadow);
-    margin-bottom: 3rem;
   }
-  .fecha {
-    margin-top: 4rem;
-  }
+ 
   .countDown {
     margin-top: 9rem;
   }
