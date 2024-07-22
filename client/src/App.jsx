@@ -12,6 +12,10 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
+
+  useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
