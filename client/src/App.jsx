@@ -10,11 +10,7 @@ import Regalo from './logica/regalo.jsx';
 function App() {
 
   const [data, setData] = useState(null);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []); 
-
+  
   useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
