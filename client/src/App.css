@@ -134,7 +134,7 @@ h1 {
 .ver-mas-container {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-bottom: 20px 0;
 }
 
 .ver-mas-button {
@@ -143,9 +143,9 @@ h1 {
   border: none;
   border-radius: var(--border-radius);
   padding: var(--padding-button);
-  margin-top: 10px;
+  margin-top: auto;
   cursor: pointer;
-  font-size: var(--font-size-button);
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
