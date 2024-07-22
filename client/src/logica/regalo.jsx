@@ -24,7 +24,7 @@ const Regalo = () => {
         <button onClick={handleIconClick} className="ver-mas-button">Ver más</button>
         </div>
         {mostrarRegalo && (
-            <p className='datos'>Plata plata mucha plata (diganme que pongo aca)</p>
+            <p className='datos p-plata'>Plata plata mucha plata (diganme que pongo aca)</p>
         )}
 
     </div>
