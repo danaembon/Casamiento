@@ -40,8 +40,8 @@ body {
 
 @font-face {
   font-family: 'Amperzand';
-  src: url('/fonts/Amperzand.woff2') format('woff2'),
-       url('/fonts/Amperzand.woff') format('woff');
+  src: url('../public/fonts/Amperzand.woff2') format('woff2'),
+       url('../public/fonts/Amperzand.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
