@@ -232,6 +232,7 @@ label, h2, h3 {
   font-size: 5rem;
   padding: 0;
   margin: var(--margin-title) 0;
+  letter-spacing: 0.4rem;
 }
 
 .navegation {
@@ -490,7 +491,7 @@ a {
 
   .titulo {
     margin-top: 2rem;
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .contenedorFotos {
