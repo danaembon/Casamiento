@@ -17,6 +17,7 @@ const MapComponent = () => {
           <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
         </svg>
       </span>
+      <button onClick={handleIconClick} className="ver-mas-button">Ver más</button>
       {!mostrarMapa && (
         <svg width="25vw" height="10" class="line-horizontal">
         <line x1="0" y1="5" x2="100%" y2="5" />

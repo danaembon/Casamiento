@@ -131,6 +131,23 @@ h1 {
   margin-top: 2rem;
 }
 
+
+.ver-mas-button {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: var(--font-size-button);
+  font-weight: bold;
+}
+
+.ver-mas-button:hover {
+  opacity: 0.8;
+}
+
 .icono-mapa, .icono-regalo, .infinity {
   cursor: pointer;
   margin: 20px 0;
