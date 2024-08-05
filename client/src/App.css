@@ -70,7 +70,7 @@ h1 {
 }
 
 #informacion {
-  padding: 4rem 2rem;
+  padding: 10rem 2rem;
   margin-top: 0;
   margin-bottom: 10rem;
   background-color: var(--color-terciario);
@@ -481,7 +481,7 @@ a {
   margin-bottom: 10px;
 }
   #informacion {
-    padding: 2rem 1rem;
+    padding: 7rem 1rem;
     margin-top: 0;
     margin-bottom: 2rem;
     user-select: none;
