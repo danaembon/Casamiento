@@ -153,6 +153,7 @@ h1 {
 }
 .contenedor-sobre {
   display: flex;
+  justify-content: center;
 }
 
 .icono-mapa, .icono-regalo, .infinity {
