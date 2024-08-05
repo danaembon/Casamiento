@@ -10,7 +10,7 @@ const Regalo = () => {
   return(
     <div className='regalo'>
 
-        <p className='p-regalo datos' onClick={handleIconClick}>Nada nos haría más felices que compartir este día con vos. Si querés sumar a nuestra felicidad un aporte económico te dejamos estas opciones:</p>
+        <p className='p-regalo datos' onClick={handleIconClick}>¿Querés hacernos un regalo?</p>
         <span className='icono-regalo' onClick={handleIconClick}>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-gift" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f1eded" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -23,8 +23,17 @@ const Regalo = () => {
         <div className="ver-mas-container">
         <button onClick={handleIconClick} className="ver-mas-button">Ver más</button>
         </div>
-        {mostrarRegalo && (
-            <p className='datos p-plata'>Plata plata mucha plata (diganme que pongo aca)</p>
+        {mostrarRegalo && ( 
+            <div>
+            <p className='datos p-plata'>El día de la fiesta</p>
+            <span className='icono-sobre'>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f1eded" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+              <path d="M3 7l9 6l9 -6" />
+            </svg>  
+            </span>
+            </div>
         )}
 
     </div>
