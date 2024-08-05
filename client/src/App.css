@@ -38,14 +38,6 @@ body {
   text-align: center;
 }
 
-@font-face {
-  font-family: 'Amperzand';
-  src: url('../public/fonts/Amperzand.woff2') format('woff2'),
-       url('../public/fonts/Amperzand.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 h1 {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-heading);
