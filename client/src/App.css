@@ -252,7 +252,7 @@ label, h2, h3 {
 }
 
 .titulo {
-  font-family: 'Amperzand', sans-serif;
+  font-family: "Cormorant", serif;
   font-size: 5rem;
   padding: 0;
   margin: var(--margin-title) 0;
