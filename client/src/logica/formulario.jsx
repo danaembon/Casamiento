@@ -66,7 +66,7 @@ const Formulario = () => {
   </div>
 
   <div className="input-group">
-    <label htmlFor="musica">Artista/Canción que no puede faltar en la fiesta: </label>
+    <label htmlFor="musica">Artista/Canción que no puede no sonar en la fiesta: </label>
     <input
       type="text"
       id="cancion"

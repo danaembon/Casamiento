@@ -148,7 +148,7 @@ h1 {
 }
 
 .icono-sobre {
-  margin: auto;
+  margin-right: 1rem;
   animation: draw 4s infinite;
 }
 .contenedor-sobre {
@@ -584,8 +584,7 @@ a {
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease;
-  height: -webkit-fill-available;
-  width: -webkit-fill-available; /* Asegurar altura completa */
+  height: 100vh;/* Asegurar altura completa */
 }
 
 .carousel-image-container {
