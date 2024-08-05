@@ -576,7 +576,8 @@ a {
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease;
-  height: 100%; /* Asegurar altura completa */
+  height: -webkit-fill-available;
+  width: -webkit-fill-available; /* Asegurar altura completa */
 }
 
 .carousel-image-container {
