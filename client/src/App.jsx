@@ -63,7 +63,7 @@ function App() {
         <div className='texto'>
           <p className='fecha'>17-11-24</p>
           <hr className="linea-separadora-inicio titulo"/>
-          <h1 className='titulo'>IyM</h1>
+          <h1 className='titulo'>I&M</h1>
           <hr className="linea-separadora-inicio invitamos"/>
           <h2 className='subtitulo'>Queremos compartir este momento junto a vos</h2>
           <span className='infinity'>
