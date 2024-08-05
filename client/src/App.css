@@ -151,6 +151,9 @@ h1 {
   margin: auto;
   animation: draw 4s infinite;
 }
+.contenedor-sobre {
+  display: flex;
+}
 
 .icono-mapa, .icono-regalo, .infinity {
   cursor: pointer;
