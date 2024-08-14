@@ -51,10 +51,8 @@ h1 {
   margin: 1rem 0;
 }
 
-.container-cbu {
-  padding: 5rem;
-  margin: auto;
-
+.container-cbu-titular, .container-cbu-ars, .container-cbu-usd {
+ padding-bottom: 2rem ;
 }
 
 .cuenta-datos {

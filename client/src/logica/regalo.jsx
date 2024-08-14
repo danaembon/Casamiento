@@ -6,6 +6,11 @@ const Regalo = () => {
   const handleIconClick = () => {
     setMostrarRegalo(!mostrarRegalo);
   };
+  const [mostrarCBU, setMostrarCBU] = useState(false);
+
+  const handleIconCBU = () => {
+    setMostrarCBU(!mostrarCBU);
+  };
 
   return(
     <div className='regalo'>
@@ -35,7 +40,11 @@ const Regalo = () => {
             </span>
             <p className='datos p-plata'>El día de la fiesta</p>
             </div>
-            <div className='container-cbu'>
+            
+            <p className='datos p-plata' onClick={handleIconCBU} >CBU</p>
+            <button onClick={handleIconCBU} className="ver-mas-button">Ver más</button>
+            {mostrarCBU && (
+              <div className='container-cbu'>
               <div className='container-cbu-titular'>
                 <p className='datos p-plata cuenta-datos'><b>Titular:</b> Michelle Tali Langleben</p>
                 <p className='datos p-plata banco'><b>Banco:</b>Banco de la Provincia de Buenos Aires</p>
@@ -51,6 +60,8 @@ const Regalo = () => {
                 <p className='datos p-plata cuenta-datos'>Alias: IAIR.MICHELLE.USD</p>
               </div>
             </div>
+            )}
+            
 
           </>
         )}
