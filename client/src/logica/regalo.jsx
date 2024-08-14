@@ -41,7 +41,7 @@ const Regalo = () => {
             <p className='datos p-plata'>El día de la fiesta o...</p>
             </div>
             
-            <p className='datos p-plata' onClick={handleIconCBU} >CBU</p>
+            <p className='datos p-plata cbu' onClick={handleIconCBU} >CBU</p>
             <button onClick={handleIconCBU} className="ver-mas-button">Ver más</button>
             {mostrarCBU && (
               <div className='container-cbu'>
