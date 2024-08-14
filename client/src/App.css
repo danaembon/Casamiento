@@ -33,6 +33,10 @@ body {
   color: var(--color-primary);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   margin: auto;
   text-align: center;
@@ -45,6 +49,16 @@ h1 {
   line-height: 1.1;
   user-select: none;
   margin: 1rem 0;
+}
+
+.container-cbu {
+  padding: 5rem;
+  margin: auto;
+
+}
+
+.cuenta-datos {
+  font-size: 0.5rem;
 }
 
 .line-horizontal line, .line-vertical line {

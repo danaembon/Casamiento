@@ -37,18 +37,18 @@ const Regalo = () => {
             </div>
             <div className='container-cbu'>
               <div className='container-cbu-titular'>
-                <p className='datos p-plata'>Titular: Michelle Tali Langleben</p>
-                <p className='datos p-plata'>Banco de la Provincia de Buenos Aires</p>
+                <p className='datos p-plata cuenta-datos'><b>Titular:</b> Michelle Tali Langleben</p>
+                <p className='datos p-plata banco'><b>Banco:</b>Banco de la Provincia de Buenos Aires</p>
               </div>
               <div className='container-cbu-ars'>
-                <p className='datos p-plata'>Cuenta en ARS:</p>
-                <p className='datos p-plata'>CBU:0140100003402350809673</p>
-                <p className='datos p-plata'>Alias: IAIR.MICHELLE</p>
+                <p className='datos p-plata cuenta'>Cuenta en ARS:</p>
+                <p className='datos p-plata cuenta-datos'>CBU:0140100003402350809673</p>
+                <p className='datos p-plata cuenta-datos'>Alias: IAIR.MICHELLE</p>
               </div>
               <div className='container-cbu-usd'>
-                <p className='datos p-plata'>Cuenta en USD:</p>
-                <p className='datos p-plata'>CBU:0140100004402350095453</p>
-                <p className='datos p-plata'>Alias: IAIR.MICHELLE.USD</p>
+                <p className='datos p-plata cuenta'>Cuenta en USD:</p>
+                <p className='datos p-plata cuenta-datos'>CBU:0140100004402350095453</p>
+                <p className='datos p-plata cuenta-datos'>Alias: IAIR.MICHELLE.USD</p>
               </div>
             </div>
 
