@@ -1,61 +1,51 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import PHOTOS from './consts';
 
 const Photos = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const timeoutRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const resetTimeout = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === PHOTOS.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? PHOTOS.length - 1 : prev - 1));
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
   };
 
   useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () => setCurrentIndex((prevIndex) => (prevIndex === PHOTOS.length - 1 ? 0 : prevIndex + 1)),
-      3000 // Cambia cada 3 segundos
-    );
-
-    return () => {
-      resetTimeout();
-    };
-  }, [currentIndex]);
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Cambia cada 5 segundos
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
   return (
     <div className="carousel">
-      <div
-        className="carousel-images"
-        style={{ transform: `translateX(${-currentIndex * 100}%)` }}
-      >
+      <div className="carousel-images" style={{ transform: `translateX(-${currentSlide * 100 / PHOTOS.length}%)`, width: `${PHOTOS.length * 100}%` }}>
         {PHOTOS.map((photo, index) => (
-          <div className="carousel-image-container" key={index}>
-            <img src={photo.src} alt={photo.alt} className="carousel-image" />
+          <div key={index} className="carousel-image-container" style={{ width: `${100 / PHOTOS.length}%` }}>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className={`carousel-image ${index === currentSlide ? 'active' : ''}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
-      <div className="navigation">
-        <button
-          className="prev"
-          onClick={() => setCurrentIndex(currentIndex === 0 ? PHOTOS.length - 1 : currentIndex - 1)}
-        >
-          &#10094;
-        </button>
-        <button
-          className="next"
-          onClick={() => setCurrentIndex((currentIndex + 1) % PHOTOS.length)}
-        >
-          &#10095;
-        </button>
-      </div>
+      <a className="prev" onClick={prevSlide}>&#10094;</a>
+      <a className="next" onClick={nextSlide}>&#10095;</a>
       <div className="dots">
-        {PHOTOS.map((_, idx) => (
-          <div
-            key={idx}
-            className={`dot ${currentIndex === idx ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(idx)}
-          />
+        {PHOTOS.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentSlide ? 'active' : ''}`}
+            onClick={() => goToSlide(index)}
+          ></span>
         ))}
       </div>
     </div>
