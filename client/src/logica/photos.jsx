@@ -1,54 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import PHOTOS from './consts';
 
 const Photos = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === PHOTOS.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? PHOTOS.length - 1 : prev - 1));
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // Cambia cada 5 segundos
-    return () => clearInterval(interval);
-  }, [currentSlide]);
-
   return (
-    <div className="carousel">
-      <div className="carousel-images" style={{ transform: `translateX(-${currentSlide * 100 / PHOTOS.length}%)`, width: `${PHOTOS.length * 100}%` }}>
-        {PHOTOS.map((photo, index) => (
-          <div key={index} className="carousel-image-container" style={{ width: `${100 / PHOTOS.length}%` }}>
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              className={`carousel-image ${index === currentSlide ? 'active' : ''}`}
-              loading="lazy"
-            />
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay]}
+      navigation
+      pagination={{ clickable: true }}
+      autoplay={{ delay: 3000 }}
+      loop={true}
+      className="mySwiper"
+    >
+      {PHOTOS.map((photo, index) => (
+        <SwiperSlide key={index}>
+          <div className="carousel-image-container">
+            <img src={photo.src} alt={photo.alt} className="carousel-image" />
           </div>
-        ))}
-      </div>
-      <a className="prev" onClick={prevSlide}>&#10094;</a>
-      <a className="next" onClick={nextSlide}>&#10095;</a>
-      <div className="dots">
-        {PHOTOS.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-          ></span>
-        ))}
-      </div>
-    </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
