@@ -632,7 +632,7 @@ a {
 }
 
 .swiper-pagination-bullet-active {
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 .prev, .next {
