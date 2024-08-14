@@ -617,7 +617,14 @@ a {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ffffff; /* Color de las flechas de navegación */
+  color: #ffffff !important; /* Fuerza el color blanco */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  color: #dddddd !important; /* Cambia a un gris claro al hacer hover o click */
 }
 
 .swiper-pagination-bullet {
