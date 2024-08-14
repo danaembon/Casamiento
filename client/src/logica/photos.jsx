@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PHOTOS from './consts';
-import './App.css';
 
 const Photos = () => {
   const [currentSlide, setCurrentSlide] = useState(1); // Start from the second slide (first actual image)
