@@ -40,23 +40,22 @@ const Regalo = () => {
             </span>
             <p className='datos p-plata'>El día de la fiesta o...</p>
             </div>
-            
-            <p className='datos p-plata cbu' onClick={handleIconCBU} >CBU</p>
-            <button onClick={handleIconCBU} className="ver-mas-button">Ver más</button>
+          
+            <button onClick={handleIconCBU} className="ver-mas-button">Ver CBU</button>
             {mostrarCBU && (
               <div className='container-cbu'>
               <div className='container-cbu-titular'>
-                <p className='datos p-plata cuenta-datos'><b>Titular : </b> Michelle Tali Langleben</p>
-                <p className='datos p-plata banco'><b>Banco : </b>Banco de la Provincia de Buenos Aires</p>
+                <p className='datos p-plata cuenta-datos'><b>Titular: </b> Michelle Tali Langleben</p>
+                <p className='datos p-plata banco'><b>Banco: </b>Banco de la Provincia de Buenos Aires</p>
               </div>
               <div className='container-cbu-ars'>
-                <p className='datos p-plata cuenta'><b>Cuenta en ARS : </b></p>
-                <p className='datos p-plata cuenta-datos'>CBU:0140100003402350809673</p>
+                <p className='datos p-plata cuenta'><b>Cuenta en ARS: </b></p>
+                <p className='datos p-plata cuenta-datos'>CBU: 0140100003402350809673</p>
                 <p className='datos p-plata cuenta-datos'>Alias: IAIR.MICHELLE</p>
               </div>
               <div className='container-cbu-usd'>
-                <p className='datos p-plata cuenta'><b>Cuenta en USD : </b></p>
-                <p className='datos p-plata cuenta-datos'>CBU:0140100004402350095453</p>
+                <p className='datos p-plata cuenta'><b>Cuenta en USD: </b></p>
+                <p className='datos p-plata cuenta-datos'>CBU: 0140100004402350095453</p>
                 <p className='datos p-plata cuenta-datos'>Alias: IAIR.MICHELLE.USD</p>
               </div>
             </div>
